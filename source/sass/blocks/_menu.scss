@@ -5,13 +5,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		gap: 10px;
 		cursor: pointer;
-		padding: 1.25rem 0;
+		padding-bottom: 1.5rem;
+		margin-bottom: .5rem;
+		gap: .5rem;
 
 		svg {
-			width: 20px;
-			height: 20px;
+			width: 1.25rem;
+			height: 1.25rem;
 			stroke: $color-default-white;
 			cursor: pointer;
 		}
@@ -22,7 +23,7 @@
 
 		max-height: 0;
 		visibility: hidden;
-		gap: 30px;
+		gap: 1.25rem;
 
 		&_is-open {
 			max-height: 100%;
@@ -33,12 +34,22 @@
 	&__item {
 		@include flex-column;
 
-		gap: 5px;
+		margin-bottom: .5rem;
+
+		&:last-child {
+			margin-bottom: 2rem;
+		}
 	}
 
 	&__subtitle {
 		font-weight: 600;
-		margin-bottom: 5px;
+		margin-bottom: 1rem;
+
+		&_new,
+		&_leaders {
+			margin-bottom: 0;
+			cursor: pointer;
+		}
 	}
 
 	&__link {
@@ -47,10 +58,23 @@
 		cursor: pointer;
 	}
 
+	@media screen and (min-width: $vp-576) {
+		&__title {
+			cursor: default;
+
+			svg {
+				display: none;
+			}
+		}
+
+		&__list {
+			max-height: 100%;
+			visibility: visible;
+		}
+	}
+
 	@media screen and (min-width: $vp-1200) {
 		&__title {
-			padding-top: 0;
-
 			svg {
 				display: none;
 			}
@@ -59,20 +83,16 @@
 		&__list {
 			@include flex-column;
 
-			gap: 30px;
 			visibility: visible;
 			max-height: 100%;
 		}
 
 		&__item {
 			@include flex-column;
-
-			gap: 5px;
 		}
 
 		&__subtitle {
 			font-weight: 800;
-			margin-bottom: 5px;
 		}
 
 		&__link {

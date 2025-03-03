@@ -54,6 +54,11 @@ h3, h4 {
   text-wrap: balance;
 }
 
+/* Default cursor */
+h1, h2, h3, h4, p, span {
+	cursor: default;
+}
+
 /* Default link styles */
 a {
   text-decoration: none;

@@ -2,18 +2,12 @@
 	color: $color-default-white;
 
 	&__title {
-		padding: 1.25rem 0;
+		margin-bottom: 1.5rem;
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: 5px;
-	}
-
-	@media screen and (min-width: $vp-1200) {
-		&__title {
-			padding-top: 0;
-		}
+		gap: .5rem
 	}
 }

@@ -1,13 +1,13 @@
 .nav {
 	position: fixed;
-	top: 85px;
+	top: 5.3125rem;
 	right: -100%;
 	width: 100%;
 	height: 100vh;
 	overflow-y: auto;
 	overflow-x: hidden;
 	background-color: $color-floral-white;
-	padding-bottom: 80px;
+	padding: 2.5rem 0;
 	transition: 0.3s;
 	overflow: hidden;
 	opacity: 0;
@@ -21,24 +21,29 @@
 	}
 
 	&__title {
-		padding: 40px 0 30px;
+		margin-bottom: 1.5rem
 	}
 
 	&__list {
 		@include flex-column;
 
-		gap: 30px;
+		gap: 1.25rem;
 	}
 
 	&__item {
 		@include flex-column;
 
-		gap: 5px;
+		margin-bottom: .5rem;
 	}
 
 	&__subtitle {
 		font-weight: 800;
-		margin-bottom: 5px;
+		margin-bottom: 1rem;
+
+		&_new,
+		&_leaders {
+			margin-bottom: 0;
+		}
 	}
 
 	&__link {
@@ -68,5 +73,9 @@
 
 	@media screen and (min-width: $vp-1200) {
 		left: 0;
+
+		&__title {
+			display: none;
+		}
 	}
 }
