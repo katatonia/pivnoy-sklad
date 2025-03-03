@@ -10,10 +10,16 @@
 @import "components/_button.scss";
 
 /* BLOCKS */
+/* header */
 @import "blocks/_header.scss";
 @import "blocks/_nav-icons.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_orders.scss";
+
+/* main */
+@import "blocks/_headling.scss";
+
+/* footer */
 @import "blocks/_footer.scss";
 @import "blocks/_social.scss";
 @import "blocks/_menu.scss";
