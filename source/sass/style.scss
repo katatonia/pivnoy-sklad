@@ -1,0 +1,22 @@
+/* GLOBAL */
+@import "global/_variables.scss";
+@import "global/_reboot.scss";
+@import "global/_utils.scss";
+@import "global/_fonts.scss";
+@import "global/_mixins.scss";
+@import "global/_container.scss";
+
+/* COMPONENTS */
+@import "components/_button.scss";
+
+/* BLOCKS */
+@import "blocks/_header.scss";
+@import "blocks/_nav-icons.scss";
+@import "blocks/_nav.scss";
+@import "blocks/_orders.scss";
+@import "blocks/_footer.scss";
+@import "blocks/_social.scss";
+@import "blocks/_menu.scss";
+@import "blocks/_contacts.scss";
+@import "blocks/_schedule.scss";
+@import "blocks/_logos.scss";

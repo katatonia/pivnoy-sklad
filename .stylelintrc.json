@@ -1,0 +1,32 @@
+{
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-recommended-scss"
+	],
+	"plugins": [
+		"stylelint-scss"
+	],
+	"rules": {
+		"indentation": "tab",
+		"max-empty-lines": 2,
+		"color-no-invalid-hex": true,
+		"string-quotes": "double",
+		"no-extra-semicolons": true,
+		"block-no-empty": true,
+		"selector-max-id": 1,
+		"selector-max-universal": 1,
+		"selector-max-class": 3,
+		"selector-max-type": 2,
+		"selector-max-combinators": 2,
+		"declaration-no-important": true,
+		"property-no-unknown": true,
+		"unit-no-unknown": true,
+		"scss/dollar-variable-pattern": "^[a-z0-9-]+$",
+		"scss/at-mixin-pattern": "^[a-z0-9-]+$",
+		"scss/at-function-pattern": "^[a-z0-9-]+$",
+		"scss/at-extend-no-missing-placeholder": true,
+		"scss/selector-no-redundant-nesting-selector": true,
+		"scss/double-slash-comment-whitespace-inside": "always",
+		"max-line-length": 120
+	}
+}

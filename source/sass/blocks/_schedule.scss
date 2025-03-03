@@ -1,0 +1,13 @@
+.schedule {
+	color: $color-default-white;
+
+	&__title {
+		padding: 1.25rem 0;
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		&__title {
+			padding-top: 0;
+		}
+	}
+}

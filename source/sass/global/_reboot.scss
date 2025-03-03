@@ -1,0 +1,129 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation in different browsers */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Geometria", sans-serif;
+  color: $color-black-magic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove default margins */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+  padding: 0;
+	margin: 0;
+}
+
+/* Core body settings */
+body {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-color: $color-floral-white;
+}
+
+/* Set shorter line heights for headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Optimize text wrapping in headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Default link styles */
+a {
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Optimize images and media */
+img, picture, video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Inherit fonts for form elements */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+	font-weight: inherit;
+  border-radius: 0;
+}
+
+/* Ensure textarea is not too small */
+textarea {
+  resize: none;
+  min-height: 10em;
+}
+
+/* Add offset for anchored links */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove default form element styles */
+input,
+textarea,
+select,
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+/* Remove autofill styles */
+input:-webkit-autofill {
+  box-shadow: inset 0 0 0 1000px $color-default-white;
+  -webkit-text-fill-color: $color-black-magic;
+}
+
+/* Remove default styles for search and number input fields */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}

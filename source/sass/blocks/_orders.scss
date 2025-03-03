@@ -1,0 +1,74 @@
+.orders {
+	position: fixed;
+	top: 85px;
+	right: -100%;
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: $color-floral-white;
+	padding-bottom: 40px;
+	transition: 0.3s;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+
+	&_is-open {
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+		z-index: 2;
+	}
+
+	&__list {
+		@include flex-column;
+
+		padding: 40px 0;
+		gap: 30px;
+	}
+
+	&__item {
+		font-weight: 600;
+	}
+
+	&__button {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 24px;
+		height: 24px;
+		cursor: pointer;
+		z-index: 3;
+
+		svg {
+			width: 24px;
+			height: 24px;
+			stroke: $color-black-magic;
+			transition: 0.3s;
+
+			&:hover,
+			&:focus,
+			&:active {
+				stroke: $color-cinnabar;
+			}
+		}
+	}
+
+	@media screen and (min-width: $vp-768) {
+		height: auto;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 100vw;
+			height: 2px;
+			background-color: $color-watercourse;
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		left: 0;
+		display: none;;
+	}
+}
