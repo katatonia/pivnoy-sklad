@@ -1,5 +1,5 @@
 .header {
-	height: 6.25rem;
+	height: 5.3125rem;
 	background-color: $color-watercourse;
 
 	&__body {
@@ -31,12 +31,12 @@
 
 	@media screen and (min-width: 1200px) {
 		&__logo {
-			width: 11.25rem;
-			height: 4.125rem;
+			width: 10rem;
+			height: 3.625rem;
 
 			img {
-				width: 11.25rem;
-				height: 4.125rem;
+				width: 10rem;
+				height: 3.625rem;
 			}
 		}
 	}
