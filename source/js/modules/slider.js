@@ -1,92 +1,96 @@
 export const slider = () => {
-    const sliderBtns = document.querySelectorAll('.slider__button');
-    const sliderList = document.querySelector('.slider__list');
-    const sliderItems = document.querySelectorAll('.slider__item');
+    const sliders = document.querySelectorAll('.slider'); // Находим все слайдеры
 
-    let currentImgIndex = 0;
-    let lastPosition = 0;
+    sliders.forEach((slider) => {
+        const sliderList = slider.querySelector('.slider__list');
+        const sliderItems = slider.querySelectorAll('.slider__item');
+        const prevBtn = slider.querySelector('#slider__button_prev');
+        const nextBtn = slider.querySelector('#slider__button_next');
 
-    /**
-     * Определяем gap между карточками (равен значению из CSS)
-     */
-    const getGap = () => {
-        return parseFloat(window.getComputedStyle(sliderList).gap) || 0;
-    };
+        let currentImgIndex = 0;
+        let lastPosition = 0;
 
-    /**
-     * Получаем ширину карточки
-     */
-    const getImgWidth = () => sliderItems[0].clientWidth;
+        /**
+         * Определяем gap между карточками (равен значению из CSS)
+         */
+        const getGap = () => {
+            return parseFloat(window.getComputedStyle(sliderList).gap) || 0;
+        };
 
-    /**
-     * Определяем, сколько карточек в ряду на текущем экране
-     */
-    const getVisibleItems = () => {
-        const sliderWidth = sliderList.clientWidth;
-        const itemWidth = getImgWidth();
-        const gap = getGap();
-        return Math.floor((sliderWidth + gap) / (itemWidth + gap));
-    };
+        /**
+         * Получаем ширину карточки
+         */
+        const getImgWidth = () => sliderItems[0].clientWidth;
 
-    /**
-     * Определяем максимальный индекс карточки
-     */
-    const getLastImgIndex = () => {
-        return sliderItems.length - getVisibleItems();
-    };
+        /**
+         * Определяем, сколько карточек в ряду на текущем экране
+         */
+        const getVisibleItems = () => {
+            const sliderWidth = sliderList.clientWidth;
+            const itemWidth = getImgWidth();
+            const gap = getGap();
+            return Math.floor((sliderWidth + gap) / (itemWidth + gap));
+        };
 
-    /**
-     * Прокручиваем слайдер на нужное расстояние
-     */
-    const scrollToCurrentImg = () => {
-        const imgOffset = currentImgIndex * (getImgWidth() + getGap());
-        const position = Math.min(imgOffset, sliderList.scrollWidth - sliderList.clientWidth);
+        /**
+         * Определяем максимальный индекс карточки
+         */
+        const getLastImgIndex = () => {
+            return sliderItems.length - getVisibleItems();
+        };
 
-        if (position === lastPosition) return;
+        /**
+         * Прокручиваем слайдер на нужное расстояние
+         */
+        const scrollToCurrentImg = () => {
+            const imgOffset = currentImgIndex * (getImgWidth() + getGap());
+            const position = Math.min(imgOffset, sliderList.scrollWidth - sliderList.clientWidth);
 
-        lastPosition = position;
-        sliderList.scrollTo({ left: position, behavior: 'smooth' });
+            if (position === lastPosition) return;
 
-        updateButtons();
-    };
+            lastPosition = position;
+            sliderList.scrollTo({ left: position, behavior: 'smooth' });
 
-    /**
-     * Показываем или скрываем кнопки, если листать нельзя
-     */
-    const updateButtons = () => {
-        const prevBtn = document.getElementById('slider__button_prev');
-        const nextBtn = document.getElementById('slider__button_next');
+            updateButtons();
+        };
 
-        prevBtn.classList.toggle('is-hidden', currentImgIndex === 0);
-        nextBtn.classList.toggle('is-hidden', currentImgIndex >= getLastImgIndex());
-    };
+        /**
+         * Показываем или скрываем кнопки, если листать нельзя
+         */
+        const updateButtons = () => {
+            prevBtn.classList.toggle('is-hidden', currentImgIndex === 0);
+            nextBtn.classList.toggle('is-hidden', currentImgIndex >= getLastImgIndex());
+        };
 
-    /**
-     * Обработчик изменения размера экрана
-     */
-    window.addEventListener('resize', () => {
-        const lastImgIndex = getLastImgIndex();
-        if (lastImgIndex < currentImgIndex) {
-            currentImgIndex = lastImgIndex;
-        }
-        scrollToCurrentImg();
-    });
-
-    /**
-     * Обработчики кликов по кнопкам
-     */
-    sliderBtns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const direction = btn.id === 'slider__button_prev' ? -1 : 1;
-
-            if (direction > 0 && currentImgIndex >= getLastImgIndex()) return;
-            if (direction < 0 && currentImgIndex <= 0) return;
-
-            currentImgIndex += direction;
+        /**
+         * Обработчик изменения размера экрана
+         */
+        window.addEventListener('resize', () => {
+            const lastImgIndex = getLastImgIndex();
+            if (lastImgIndex < currentImgIndex) {
+                currentImgIndex = lastImgIndex;
+            }
             scrollToCurrentImg();
         });
-    });
 
-    // Инициализация: скрываем кнопки, если листать нельзя
-    updateButtons();
+        /**
+         * Обработчики кликов по кнопкам
+         */
+        prevBtn.addEventListener('click', () => {
+            if (currentImgIndex > 0) {
+                currentImgIndex -= 1;
+                scrollToCurrentImg();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentImgIndex < getLastImgIndex()) {
+                currentImgIndex += 1;
+                scrollToCurrentImg();
+            }
+        });
+
+        // Инициализация: скрываем кнопки, если листать нельзя
+        updateButtons();
+    });
 };

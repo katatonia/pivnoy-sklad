@@ -38,10 +38,17 @@
 			opacity: 0;
 		}
 
+		&_paris-daisy {
+			fill: $color-paris-daisy;
+		}
+
+		&_watercourse {
+			fill: $color-watercourse;
+		}
+
 		svg {
 			width: 3.9375rem;
 			height: 1rem;
-			fill: $color-watercourse;
 		}
 	}
 

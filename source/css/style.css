@@ -585,6 +585,25 @@ button {
   fill: #025944;
 }
 
+.leaders {
+  background-color: #829A7B;
+  padding: 5rem 0;
+}
+.leaders__body {
+  width: 100%;
+}
+.leaders__title {
+  font-size: 3.062rem;
+  font-weight: 800;
+  color: #F7E24D;
+  margin-bottom: 1.5rem;
+}
+.leaders__title svg {
+  width: 1.875rem;
+  height: 1.875rem;
+  fill: #F7E24D;
+}
+
 .slider {
   display: flex;
   flex-direction: column;
@@ -619,10 +638,15 @@ button {
   visibility: hidden;
   opacity: 0;
 }
+.slider__button_paris-daisy {
+  fill: #F7E24D;
+}
+.slider__button_watercourse {
+  fill: #025944;
+}
 .slider__button svg {
   width: 3.9375rem;
   height: 1rem;
-  fill: #025944;
 }
 .slider #slider__button_next svg {
   transform: scaleX(-1);
