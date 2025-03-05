@@ -3,12 +3,16 @@
 	flex-direction: column-reverse;
 	justify-content: flex-end;
 	gap: 4rem;
+	flex: 0 0 min(100%, 727px);
 
 	&__block {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 100%;
+
+		&_left {
+			height: 100%;
+		}
 	}
 
 	&__title {
@@ -76,6 +80,7 @@
 		height: 100%;
 		min-width: 21.25rem;
 		min-height: 21.25rem;
+		max-height: 21.25rem;
 	}
 
 	@media screen and (min-width: $vp-768) {
@@ -86,7 +91,6 @@
 		&__photo-bg {
 			max-width: 31.25rem;
 			min-height: 31.25rem;
-			max-height: 31.25rem;
 		}
 
 		&__logo-bg {

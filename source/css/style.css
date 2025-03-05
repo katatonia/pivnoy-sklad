@@ -721,7 +721,6 @@ button {
   overflow: hidden;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  max-width: 21.25rem;
   gap: 1rem;
   margin: 0 auto;
 }
@@ -756,11 +755,14 @@ button {
   flex-direction: column-reverse;
   justify-content: flex-end;
   gap: 4rem;
+  flex: 0 0 min(100%, 727px);
 }
 .project__block {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.project__block_left {
   height: 100%;
 }
 .project__title {
@@ -819,6 +821,7 @@ button {
   height: 100%;
   min-width: 21.25rem;
   min-height: 21.25rem;
+  max-height: 21.25rem;
 }
 @media screen and (min-width: 768px) {
   .project {
@@ -829,7 +832,6 @@ button {
   .project__photo-bg {
     max-width: 31.25rem;
     min-height: 31.25rem;
-    max-height: 31.25rem;
   }
   .project__logo-bg {
     margin: 0;
