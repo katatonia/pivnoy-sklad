@@ -1,0 +1,36 @@
+.projects-section {
+	background-color: $color-floral-white;
+	padding: 5rem 0;
+
+	&__list {
+		display: flex;
+		overflow: hidden;
+		scrollbar-width: none;
+		scroll-behavior: smooth;
+	}
+
+	&__slider {
+		display: flex;
+		overflow: hidden;
+		scrollbar-width: none;
+		scroll-behavior: smooth;
+		max-width: 21.25rem;
+		gap: 1rem;
+		margin: 0 auto;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		padding: 6.25rem 0;
+
+		&__slider {
+			flex-direction: column;
+			max-width: 100%;
+			margin: 0;
+			gap: 4rem;
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		padding: 7.5rem 0;
+	}
+}

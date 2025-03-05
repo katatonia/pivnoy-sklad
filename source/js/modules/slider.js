@@ -4,8 +4,8 @@ export const slider = () => {
     sliders.forEach((slider) => {
         const sliderList = slider.querySelector('.slider__list');
         const sliderItems = slider.querySelectorAll('.slider__item');
-        const prevBtn = slider.querySelector('#slider__button_prev');
-        const nextBtn = slider.querySelector('#slider__button_next');
+        const prevBtn = slider.querySelector('.slider__button_prev');
+        const nextBtn = slider.querySelector('.slider__button_next');
 
         let currentImgIndex = 0;
         let lastPosition = 0;

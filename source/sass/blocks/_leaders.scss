@@ -8,7 +8,7 @@
 
 	&__title {
 		font: {
-			size: 3.062rem;
+			size: 2rem;
 			weight: 800;
 		}
 
@@ -16,9 +16,30 @@
 		margin-bottom: 1.5rem;
 
 		svg {
-			width: 1.875rem;
-			height: 1.875rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			fill: $color-paris-daisy;
+		}
+	}
+
+	@media screen and (min-width: $vp-768) {
+		padding: 6.25rem 0;
+
+		&__title {
+			font-size: 3.062rem;
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		padding: 7.5rem 0;
+
+		&__title {
+			font-size: 3.812rem;
+
+			svg {
+				width: 2rem;
+				height: 2rem;
+			}
 		}
 	}
 }
