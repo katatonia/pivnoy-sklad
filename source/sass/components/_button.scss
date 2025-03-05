@@ -10,5 +10,13 @@
 	&:hover {
 		background-color: transparent;
 		border-color: $color-cinnabar;
+
+		a {
+			color: $color-cinnabar;;
+		}
+	}
+
+	a {
+		color: $color-default-white;
 	}
 }
