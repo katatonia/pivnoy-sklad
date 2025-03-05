@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	gap: 1rem;
-	height: 6.25rem;
+	height: 5.3125rem;
 
 	&__item {
 		&_hamburger {
@@ -43,7 +43,7 @@
 	@media screen and (min-width: $vp-1200) {
 		&__item_hamburger {
 			order: 1;
-			height: 6.25rem;
+			height: 5.3125rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -80,7 +80,9 @@
 
 		&__link_title {
 			width: auto;
-			display: block;
+			height: 5.3125rem;
+			display: flex;
+			align-items: center;
 			color: $color-default-white;
 			transition: 0.3s;
 

@@ -4,7 +4,7 @@
 
 	&__body {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -45,7 +45,7 @@
 
 	@media screen and (min-width: $vp-1200) {
 		&__title {
-			font-size: 14rem;
+			font-size: 12rem;
 		}
 	}
 }
