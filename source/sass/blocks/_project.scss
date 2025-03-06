@@ -8,30 +8,39 @@
 	&__block {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+
+		&_right {
+			height: 100%;
+		}
 
 		&_left {
-			height: 100%;
-			gap: 2rem;
+			display: none;
 		}
-	}
-
-	&__title {
-		margin-bottom: 1rem;
 	}
 
 	&__logo {
 		display: block;
-		margin: 0 auto;
+		max-width: 12.5rem;
 		width: 100%;
 		height: auto;
-		max-width: 12.5rem;
+
+		&_fermentor {
+			max-width: 15.625rem;
+		}
+	}
+
+	&__photo {
+		max-width: 25rem;
+		max-height: 31.25rem;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
 		gap: .5rem;
+		margin: 2rem 0 2.875rem;
 	}
 
 	&__button {
@@ -39,6 +48,7 @@
 		align-items: center;
 		justify-content: center;
 		margin: 0 auto;
+		margin-top: auto;
 
 		svg {
 			fill: $color-default-white;
@@ -57,44 +67,38 @@
 		text-transform: uppercase;
 	}
 
-	&__photo-bg {
-		position: relative;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		min-width: 21.25rem;
-		min-height: 21.25rem;
-		max-height: 21.25rem;
+	@media screen and (min-width: $vp-576) {
+		&__block {
+			&_left {
+				display: block;
+			}
+		}
 	}
 
 	@media screen and (min-width: $vp-768) {
 		display: grid;
-		grid-template-columns: minmax(300px, 1fr) minmax(380px, 500px);
+		grid-template-columns: 25rem 1fr;
 		gap: 2rem;
-
-		&__photo-bg {
-			max-width: 31.25rem;
-			min-height: 31.25rem;
-		}
 
 		&__logo {
 			margin: 0;
-			max-width: 12.5rem;
 		}
 
 		&__button {
 			margin: 0;
 			margin-left: auto;
 		}
+
+		&__block {
+			&_right {
+				margin-top: 2rem;
+			}
+		}
 	}
 
 	@media screen and (min-width: $vp-1200) {
-		gap: 4rem;
-
-		&__logo {
-			margin: 0;
-			max-width: 18.75rem;
+		&__text {
+			margin: 2.5rem 0 3.5rem;
 		}
 	}
 }

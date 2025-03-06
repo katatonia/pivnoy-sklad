@@ -13,24 +13,14 @@
 		text-transform: uppercase;
 	}
 
-	&__video-block {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-	}
-
-	&__video {
-		span {
-			font-weight: 600;
-		}
-	}
-
-	&__map {
+	#map {
 		width: 100%;
 		height: 21.25rem;
 	}
 
 	@media screen and (min-width: $vp-768) {
-		height: 31.25rem;
+		#map {
+			height: 31.25rem;
+		}
 	}
 }
