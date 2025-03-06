@@ -9,21 +9,12 @@
 /* COMPONENTS */
 @import "components/_button.scss";
 
-/* BLOCKS */
+/* GENERAL BLOCKS */
 /* header */
 @import "blocks/_header.scss";
 @import "blocks/_nav-icons.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_orders.scss";
-
-/* main */
-@import "blocks/_headling.scss";
-@import "blocks/_new.scss";
-@import "blocks/_leaders.scss";
-@import "blocks/_slider.scss";
-@import "blocks/_projects-section.scss";
-@import "blocks/_project.scss";
-@import "blocks/_location.scss";
 
 /* footer */
 @import "blocks/_footer.scss";
@@ -33,3 +24,17 @@
 @import "blocks/_schedule.scss";
 @import "blocks/_connection.scss";
 @import "blocks/_logos.scss";
+
+/* INDEX */
+/* main */
+@import "blocks/_headling.scss";
+@import "blocks/_new.scss";
+@import "blocks/_leaders.scss";
+@import "blocks/_slider.scss";
+@import "blocks/_projects-section.scss";
+@import "blocks/_project.scss";
+@import "blocks/_location.scss";
+
+/* PRODUCT */
+/* main */
+@import "blocks/_product.scss";

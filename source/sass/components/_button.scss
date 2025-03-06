@@ -7,16 +7,17 @@
 	transition: background-color 0.3s;
 	border: 2px solid transparent;
 
+	a {
+		color: $color-default-white;
+	}
+
 	&:hover {
 		background-color: transparent;
 		border-color: $color-cinnabar;
 
 		a {
-			color: $color-cinnabar;;
+			color: $color-cinnabar;
+			;
 		}
-	}
-
-	a {
-		color: $color-default-white;
 	}
 }
