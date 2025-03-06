@@ -1,0 +1,36 @@
+.location {
+	background-color: $color-floral-white;
+	padding-bottom: 5rem;
+
+	&__title {
+		font: {
+			size: 2rem;
+			weight: 800;
+		}
+
+		color: $color-cinnabar;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	&__video-block {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+
+	&__video {
+		span {
+			font-weight: 600;
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 21.25rem;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		height: 31.25rem;
+	}
+}
