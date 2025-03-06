@@ -28,7 +28,7 @@
 
 		&__title {
 			font: {
-				size: 5rem;
+				size: 3.812rem;
 				weight: 800;
 			}
 
@@ -75,6 +75,12 @@
 
 	@media screen and (min-width: $vp-768) {
 		padding: 3.75rem 0;
+
+		.col-1 {
+			&__title {
+				font-size: 5rem;
+			}
+		}
 	}
 
 	@media screen and (min-width: $vp-1200) {

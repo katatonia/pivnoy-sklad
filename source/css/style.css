@@ -764,6 +764,7 @@ button {
 }
 .project__block_left {
   height: 100%;
+  gap: 2rem;
 }
 .project__title {
   margin-bottom: 1rem;
@@ -865,7 +866,7 @@ button {
   margin-bottom: 5rem;
 }
 .footer .col-1__title {
-  font-size: 5rem;
+  font-size: 3.812rem;
   font-weight: 800;
   text-transform: uppercase;
   color: #fff;
@@ -901,6 +902,9 @@ button {
   .footer {
     padding: 3.75rem 0;
   }
+  .footer .col-1__title {
+    font-size: 5rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer {
@@ -923,23 +927,32 @@ button {
 
 .social {
   display: flex;
-  align-content: center;
-  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 .social__item {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .social__item svg {
-  width: 1.875rem;
-  height: 1.875rem;
+  width: 1.5rem;
+  height: 1.5rem;
   transition: 0.3s;
   fill: #fff;
 }
 .social__item svg:hover {
   fill: #F04E23;
+}
+@media screen and (min-width: 768px) {
+  .social {
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    gap: 3rem;
+  }
 }
 
 .menu {
