@@ -1,0 +1,31 @@
+.verification {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: $color-watercourse;
+
+	&__logo {
+		position: absolute;
+		top: 1.25rem;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		color: $color-default-white;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: .75rem;
+	}
+
+	&__button {
+		&_no:hover {
+
+		}
+	}
+}

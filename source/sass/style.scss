@@ -26,7 +26,6 @@
 @import "blocks/_logos.scss";
 
 /* INDEX */
-/* main */
 @import "blocks/_headling.scss";
 @import "blocks/_new.scss";
 @import "blocks/_leaders.scss";
@@ -36,6 +35,11 @@
 @import "blocks/_location.scss";
 
 /* PRODUCT */
-/* main */
 @import "blocks/_product.scss";
 @import "blocks/_counter.scss";
+
+/* VERIFICATION */
+@import "blocks/_verification.scss";
+
+/* LOGIN */
+@import "blocks/_login.scss";
