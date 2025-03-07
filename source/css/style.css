@@ -268,8 +268,29 @@ button {
   background-color: transparent;
   border-color: #F04E23;
 }
-.button:hover a {
-  color: #F04E23;
+
+.favorite {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #F04E23;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.favorite svg {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke: #fff;
+  cursor: pointer;
+}
+.favorite svg .is-active {
+  fill: #fff;
 }
 
 /* GENERAL BLOCKS */
@@ -1111,7 +1132,6 @@ button {
 .product__metrics {
   display: flex;
   gap: 1rem;
-  font-weight: 600;
 }
 .product__block-2 {
   display: flex;
@@ -1120,13 +1140,18 @@ button {
   grid-area: block-2;
 }
 .product__price {
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
 }
 .product__counter {
+  width: 18.75rem;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   margin: 0.5rem 0;
+}
+.product__counter-result {
+  font-size: 1.5rem;
 }
 .product__counter-body {
   height: 2.5rem;
@@ -1139,11 +1164,15 @@ button {
 .product__counter-body svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: #F04E23;
+  stroke: #F04E23;
   cursor: pointer;
 }
 .product__button:hover {
   color: #F04E23;
+}
+.product__buttons {
+  display: flex;
+  gap: 0.5rem;
 }
 .product__details {
   display: flex;
@@ -1153,13 +1182,23 @@ button {
   padding-left: 0.625rem;
 }
 .product__block-3 {
+  display: flex;
+  flex-direction: column;
   grid-area: block-3;
+}
+.product__block-2-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+.product__block-3-title {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .product__block-1 {
     height: 100%;
     display: grid;
-    grid-template-columns: 25rem 1fr;
+    grid-template-columns: minmax(21.25rem, 25rem) 1fr;
   }
   .product__card {
     justify-content: space-between;
@@ -1175,5 +1214,18 @@ button {
   }
   .product__metrics {
     font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product__body {
+    display: grid;
+    grid-template-areas: "block-1 block-1" "block-2 block-3";
+    grid-template-columns: 1fr 1fr;
+  }
+  .product__block-2 {
+    margin-top: 2.5rem;
+  }
+  .product__block-3 {
+    margin-top: 2.5rem;
   }
 }

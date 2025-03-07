@@ -40,7 +40,6 @@
 	&__metrics {
 		display: flex;
 		gap: 1rem;
-		font-weight: 600;
 	}
 
 	&__block-2 {
@@ -51,14 +50,20 @@
 	}
 
 	&__price {
-		margin-bottom: 1rem;
+		font-size: 1.25rem;
+		margin-top: 1.5rem;
 	}
 
 	&__counter {
+		width: 18.75rem;
 		display: flex;
-		gap: .5rem;
+		gap: 1rem;
 		align-items: center;
 		margin: .5rem 0;
+	}
+
+	&__counter-result {
+		font-size: 1.5rem;
 	}
 
 	&__counter-body {
@@ -72,13 +77,18 @@
 		svg {
 			width: 1.5rem;
 			height: 1.5rem;
-			fill: $color-cinnabar;
+			stroke: $color-cinnabar;
 			cursor: pointer;
 		}
 	}
 
 	&__button:hover {
 		color: $color-cinnabar;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: .5rem;
 	}
 
 	&__details {
@@ -90,14 +100,26 @@
 	}
 
 	&__block-3 {
+		display: flex;
+		flex-direction: column;
 		grid-area: block-3;
+	}
+
+	&__block-2-title {
+		font-size: 1.25rem;
+		margin-bottom: 1.25rem;
+	}
+
+	&__block-3-title {
+		font-size: 1.25rem;
+		margin-bottom: 1.5rem;
 	}
 
 	@media screen and (min-width: 768px) {
 		&__block-1 {
 			height: 100%;
 			display: grid;
-			grid-template-columns: 25rem 1fr;
+			grid-template-columns: minmax(21.25rem, 25rem) 1fr;
 		}
 
 		&__card {
@@ -118,6 +140,24 @@
 
 		&__metrics {
 			font-size: 1.25rem;
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		&__body {
+			display: grid;
+			grid-template-areas:
+				'block-1 block-1'
+				'block-2 block-3';
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__block-2 {
+			margin-top: 2.5rem;
+		}
+
+		&__block-3 {
+			margin-top: 2.5rem;
 		}
 	}
 }

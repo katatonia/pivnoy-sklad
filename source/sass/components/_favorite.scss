@@ -1,0 +1,25 @@
+.favorite {
+	position: relative;
+	width: 2.5rem;
+	height: 2.5rem;
+	background-color: $color-cinnabar;
+	border: 2px solid transparent;
+	cursor: pointer;
+	transition: .3s;
+
+	svg {
+		content: '';
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		stroke: $color-default-white;
+		cursor: pointer;
+
+		.is-active {
+			fill: $color-default-white;
+		}
+	}
+}
