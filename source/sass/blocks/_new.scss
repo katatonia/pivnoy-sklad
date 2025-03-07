@@ -22,11 +22,28 @@
 		}
 	}
 
+	&__name {
+		font-size: 1.25rem;
+		color: $color-watercourse;
+	}
+
+	&__brewery {
+		color: $color-watercourse;
+	}
+
 	@media screen and (min-width: $vp-768) {
 		padding: 6.25rem 0;
 
 		&__title {
 			font-size: 3.062rem;
+		}
+
+		&__brewery {
+			font-size: 1.25rem;
+		}
+
+		&__name {
+			font-size: 2rem;
 		}
 	}
 

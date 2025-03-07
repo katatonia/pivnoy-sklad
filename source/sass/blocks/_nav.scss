@@ -64,6 +64,7 @@
 	@media screen and (min-width: $vp-1200) {
 		left: 0;
 		height: auto;
+		box-shadow: 0 1px 10px 0px rgba(0,0,0,.1);
 
 		&__title {
 			display: none;

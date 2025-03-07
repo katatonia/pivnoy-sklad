@@ -11,6 +11,7 @@
 
 		&_right {
 			height: 100%;
+			justify-content: space-between;
 		}
 
 		&_left {
@@ -23,6 +24,7 @@
 		max-width: 12.5rem;
 		width: 100%;
 		height: auto;
+		margin: 0 auto;
 
 		&_fermentor {
 			max-width: 15.625rem;
@@ -80,19 +82,9 @@
 		grid-template-columns: 25rem 1fr;
 		gap: 2rem;
 
-		&__logo {
-			margin: 0;
-		}
-
 		&__button {
 			margin: 0;
 			margin-left: auto;
-		}
-
-		&__block {
-			&_right {
-				margin-top: 2rem;
-			}
 		}
 	}
 

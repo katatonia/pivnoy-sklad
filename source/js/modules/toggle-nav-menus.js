@@ -102,14 +102,6 @@ export const toggleNavMenus = () => {
 		}
 	};
 
-	// Предотвращение закрытия при клике внутри меню
-	const preventContextMenuClose = (event) => {
-		if (nav.contains(event.target)) {
-			event.preventDefault();
-			event.stopPropagation();
-		}
-	};
-
 	// Слушатели событий
 	window.addEventListener("resize", handleResize);
 	hamburger.addEventListener("click", toggleMenu);
@@ -121,5 +113,4 @@ export const toggleNavMenus = () => {
 	nav.addEventListener("mouseenter", handleHover);
 	hamburger.addEventListener("mouseleave", handleMouseLeave);
 	nav.addEventListener("mouseleave", handleMouseLeave);
-	nav.addEventListener("contextmenu", preventContextMenuClose);
 };

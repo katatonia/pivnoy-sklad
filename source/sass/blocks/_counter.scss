@@ -1,0 +1,38 @@
+.counter {
+	width: 18.75rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	margin: .5rem 0;
+
+	&__result {
+		font-size: 1.5rem;
+	}
+
+	&__body {
+		height: 2.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		align-items: center;
+		width: 7.5rem;
+		border: 2px solid $color-cinnabar;
+	}
+
+	&__number {
+		margin: 0 auto;
+	}
+
+	&__plus {
+		width: 1.5rem;
+		height: 1.5rem;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	&__minus {
+		width: 1.5rem;
+		height: 1.5rem;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+}

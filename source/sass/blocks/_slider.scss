@@ -9,7 +9,6 @@
 		scroll-behavior: smooth;
 		min-height: 21.25rem;
 		max-width: 86.25rem;
-		max-height: 21.25rem;
 		gap: 1rem;
 	}
 
@@ -17,19 +16,24 @@
 		display: none;
 	}
 
+	&__img {
+		margin-bottom: 1.25rem;
+	}
+
 	&__item {
+		display: flex;
+		flex-direction: column;
 		transition: transform 0.3s ease-in-out;
 		min-width: 21.25rem;
 		min-height: 21.25rem;
 		max-width: 21.25rem;
-		max-height: 21.25rem;
 	}
 
 	&__buttons {
 		display: flex;
 		gap: .5rem;
 		justify-content: center;
-		margin-top: 1rem;
+		margin-top: 2.5rem;
 	}
 
 	&__button {
@@ -71,7 +75,6 @@
 			min-width: 20.8125rem;
 			min-height: 20.8125rem;
 			max-width: 20.8125rem;
-			max-height: 20.8125rem;
 		}
 	}
 }

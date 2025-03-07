@@ -36,6 +36,12 @@
 		}
 	}
 
+	&__item_favorite {
+		svg {
+			color: transparent;
+		}
+	}
+
 	&__login-btn {
 		display: none;
 	}
