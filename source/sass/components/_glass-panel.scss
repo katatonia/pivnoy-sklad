@@ -1,15 +1,10 @@
 .glass-panel {
 	position: relative;
-	padding: 2.5rem 1.25rem;
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 20px;
 	backdrop-filter: blur(20px);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 	border: 1px solid rgba(255, 255, 255, 0.2);
-
-	@media screen and (min-width: $vp-768) {
-		padding: 5rem 2.5rem;
-	}
 }
 
 .blob {

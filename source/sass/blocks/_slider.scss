@@ -18,15 +18,27 @@
 
 	&__img {
 		margin-bottom: 1.25rem;
+		padding: 2.6875rem 1.25rem;
 	}
 
 	&__item {
 		display: flex;
 		flex-direction: column;
 		transition: transform 0.3s ease-in-out;
-		min-width: 21.25rem;
+		min-width: 20.3125rem;
 		min-height: 21.25rem;
 		max-width: 21.25rem;
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		padding: 0 1.25rem;
+		color: $color-default-white;
+	}
+
+	&__name {
+		font-size: 1.25rem;
 	}
 
 	&__buttons {
@@ -46,17 +58,17 @@
 			opacity: 0;
 		}
 
-		// &_paris-daisy {
-		// 	fill: $color-paris-daisy;
-		// }
+		&_paris-daisy {
+			fill: $color-paris-daisy;
+		}
 
-		// &_watercourse {
-		// 	fill: $color-watercourse;
-		// }
+		&_watercourse {
+			fill: $color-watercourse;
+		}
 
-		// &_cinnabar {
-		// 	fill: $color-cinnabar;
-		// }
+		&_cinnabar {
+			fill: $color-cinnabar;
+		}
 
 		svg {
 			width: 3.9375rem;
