@@ -269,6 +269,42 @@ button {
   color: #fff;
 }
 
+.glass-panel {
+  position: relative;
+  padding: 2.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .glass-panel {
+    padding: 5rem 2.5rem;
+  }
+}
+
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(240, 78, 35, 0.7), rgba(250, 167, 74, 0.3));
+  border-radius: 50%;
+  filter: blur(80px);
+}
+.blob:first-child {
+  top: 0;
+  left: 0;
+}
+.blob:nth-child(2) {
+  top: 30%;
+  right: 30%;
+}
+.blob:last-child {
+  bottom: 0;
+  right: 0;
+}
+
 /* GENERAL BLOCKS */
 /* header */
 .header {
@@ -787,7 +823,7 @@ button {
 }
 
 .new {
-  background-color: #FAA74A;
+  background: linear-gradient(147.05deg, rgba(255, 237, 190, 0) 64.83%, #FFEDBE 77.53%, #FFBCC3 90.17%);
   padding: 5rem 0;
 }
 .new__body {
@@ -806,10 +842,6 @@ button {
 }
 .new__name {
   font-size: 1.25rem;
-  color: #025944;
-}
-.new__brewery {
-  color: #025944;
 }
 @media screen and (min-width: 768px) {
   .new {
@@ -839,7 +871,7 @@ button {
 }
 
 .leaders {
-  background-color: #829A7B;
+  background: linear-gradient(147.05deg, rgba(255, 237, 190, 0) 64.83%, #FFEDBE 77.53%, #FFBCC3 90.17%);
   padding: 5rem 0;
 }
 .leaders__body {
@@ -858,10 +890,6 @@ button {
 }
 .leaders__name {
   font-size: 1.25rem;
-  color: #F7E24D;
-}
-.leaders__brewery {
-  color: #F7E24D;
 }
 @media screen and (min-width: 768px) {
   .leaders {
@@ -929,15 +957,6 @@ button {
 .slider__button.is-hidden {
   visibility: hidden;
   opacity: 0;
-}
-.slider__button_paris-daisy {
-  fill: #F7E24D;
-}
-.slider__button_watercourse {
-  fill: #025944;
-}
-.slider__button_cinnabar {
-  fill: #F04E23;
 }
 .slider__button svg {
   width: 3.9375rem;
@@ -1046,6 +1065,9 @@ button {
 }
 .project__button:hover svg {
   fill: #F04E23;
+}
+.project__button:hover a {
+  color: #F04E23;
 }
 .project__link {
   height: 1rem;
@@ -1274,38 +1296,36 @@ button {
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #025944;
+  background-color: #000;
 }
 .verification__logo {
   position: absolute;
   top: 1.25rem;
+  left: 1.25rem;
 }
 .verification__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   color: #fff;
 }
-.verification__buttons {
-  display: flex;
-  gap: 0.75rem;
+@media screen and (min-width: 1200px) {
+  .verification__logo {
+    top: 2.5rem;
+    left: 2.5rem;
+  }
 }
+
 /* LOGIN */
 .login {
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.login__body {
-  background-color: #025944;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: #000;
 }
 .login__logo {
   position: absolute;
@@ -1319,7 +1339,12 @@ button {
   height: 2.6875rem;
 }
 .login__form {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login__form form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1344,13 +1369,12 @@ button {
 .login__button {
   margin-top: 2.5rem;
 }
-@media screem and (min-width: 1200px) {
-  .login {
-    grid-template-columns: 1fr 1fr;
-  }
+@media screen and (min-width: 1200px) {
   .login__logo {
     width: 10rem;
     height: 3.625rem;
+    top: 2.5rem;
+    left: 2.5rem;
   }
   .login__logo img {
     width: 10rem;

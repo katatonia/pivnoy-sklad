@@ -3,14 +3,19 @@
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	background-color: $color-watercourse;
+	background-color: $color-default-black;
 
 	&__logo {
 		position: absolute;
 		top: 1.25rem;
+		left: 1.25rem;
 	}
 
 	&__body {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -18,14 +23,10 @@
 		color: $color-default-white;
 	}
 
-	&__buttons {
-		display: flex;
-		gap: .75rem;
-	}
-
-	&__button {
-		&_no:hover {
-
+	@media screen and (min-width: $vp-1200) {
+		&__logo {
+			top: 2.5rem;
+			left: 2.5rem;
 		}
 	}
 }

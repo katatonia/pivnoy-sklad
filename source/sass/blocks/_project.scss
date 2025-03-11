@@ -59,6 +59,10 @@
 		&:hover svg {
 			fill: $color-cinnabar;
 		}
+
+		&:hover a {
+			color: $color-cinnabar;
+		}
 	}
 
 	&__link {
