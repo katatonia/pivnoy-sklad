@@ -1,0 +1,32 @@
+.card {
+	position: relative;
+	max-width: 20rem;
+
+	&__img-wrapper {
+		position: relative;
+
+		.favorite {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
+
+	&__body {
+		background-color: $color-default-white;
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem .75rem .75rem;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		margin: 0 auto;
+		border-bottom: 2px solid;
+		cursor: pointer;
+	}
+}

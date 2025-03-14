@@ -1,0 +1,65 @@
+.cart-item {
+	position: relative;
+	margin-top: 2.5rem;
+	padding: 1rem 0;
+	border-bottom: 1px solid;
+
+	&__delete {
+		position: absolute;
+		top: 0;
+		right: 0;
+		stroke: $color-black-magic;
+		cursor: pointer;
+		margin-left: 0.75rem;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__brewery {
+		font-size: .875rem;
+	}
+
+	&__name {
+		font: {
+			size: 1.125rem;
+			weight: 500;
+		}
+		margin-bottom: .75rem;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: .5rem;
+	}
+
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		font-size: .875rem;
+	}
+
+	@media screen and (min-width: $vp-576) {
+		&__img {
+			width: 7.5rem;
+			height: 7.5rem;
+		}
+
+		&__desc {
+			font-size: 1rem;
+		}
+	}
+
+	@media screen and (min-width: $vp-768) {
+		&__name {
+			font-size: 2rem;
+		}
+
+		&__brewery {
+			font-size: 1.25rem;
+		}
+	}
+}

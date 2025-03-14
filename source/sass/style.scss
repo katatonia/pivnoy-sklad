@@ -8,7 +8,10 @@
 
 /* COMPONENTS */
 @import "components/_button.scss";
-@import "components/_glass-panel.scss";
+@import "components/_card-buttons.scss";
+@import "components/_card.scss";
+@import "components/_favorite.scss";
+@import "components/_counter.scss";
 
 /* GENERAL BLOCKS */
 /* header */
@@ -37,10 +40,18 @@
 
 /* PRODUCT */
 @import "blocks/_product.scss";
-@import "blocks/_counter.scss";
 
 /* VERIFICATION */
 @import "blocks/_verification.scss";
 
 /* LOGIN */
 @import "blocks/_login.scss";
+
+/* CART */
+@import "blocks/_cart.scss";
+@import "blocks/_cart-item.scss";
+
+/* CATALOG */
+@import "blocks/_catalog.scss";
+@import "blocks/_filter.scss";
+@import "blocks/_pagination.scss";

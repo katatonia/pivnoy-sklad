@@ -3,7 +3,7 @@
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	background-color: $color-default-black;
+	background-color: $color-watercourse;
 
 	&__logo {
 		position: absolute;
@@ -11,16 +11,25 @@
 		left: 1.25rem;
 	}
 
-	&__body {
+	&__popup {
+		max-width: 450px;
+        width: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		padding: 2rem 1.25rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
-		color: $color-default-white;
+		background-color: $color-default-white;
+	}
+
+	@media screen and (min-width: $vp-768)  {
+		&__popup {
+			padding: 40px 1.5rem;
+		}
 	}
 
 	@media screen and (min-width: $vp-1200) {

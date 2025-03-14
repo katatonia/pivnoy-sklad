@@ -1,5 +1,7 @@
 .button {
-	width: 300px;
+	display: block;
+	width: 100%;
+	max-width: 18.75rem;
 	height: 40px;
 	background-color: $color-cinnabar;
 	color: $color-default-white;
@@ -10,6 +12,10 @@
 	&:hover {
 		background-color: transparent;
 		border-color: $color-cinnabar;
+	}
+
+	&_white-bg:hover {
+		color: $color-cinnabar;
 	}
 
 	a {

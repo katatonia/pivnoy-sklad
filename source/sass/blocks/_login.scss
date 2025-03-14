@@ -1,7 +1,7 @@
 .login {
 	width: 100vw;
 	height: 100vh;
-	background-color: $color-default-black;
+	background-color: $color-watercourse;
 
 	&__logo {
 		position: absolute;
@@ -21,6 +21,8 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		padding: 2rem 1.25rem;
+		background-color: $color-default-white;
 
 		form {
 			display: flex;
@@ -45,12 +47,17 @@
 			outline: none;
 			border-bottom: 2px solid $color-default-white;
 			padding-left: 2rem;
-			color: $color-default-white;
 		}
 	}
 
 	&__button {
 		margin-top: 2.5rem;
+	}
+
+	@media screen and (min-width: $vp-768)  {
+		&__form {
+			padding: 40px 1.5rem;
+		}
 	}
 
 	@media screen and (min-width: $vp-1200) {

@@ -1,0 +1,9 @@
+.pagination {
+	display: flex;
+	gap: .5rem;
+	justify-content: center;
+
+	&__button {
+		cursor: pointer;
+	}
+}

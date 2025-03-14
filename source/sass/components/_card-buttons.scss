@@ -1,0 +1,60 @@
+.card-buttons {
+	display: flex;
+	gap: .5rem;
+	margin: 0 auto;
+
+	&__basket {
+		position: relative;
+		min-width: 2.5rem;
+		height: 2.5rem;
+		background-color: $color-cinnabar;
+		border: 2px solid transparent;
+		cursor: pointer;
+		transition: .3s;
+
+		span {
+			display: none;
+		}
+	}
+
+	&__basket-icon {
+		content: '';
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		stroke: $color-default-white;
+		cursor: pointer;
+		color: transparent;
+
+		&_is-active {
+			color: $color-default-white;
+			stroke: $color-default-white;
+		}
+	}
+
+	@media screen and (min-width: $vp-576) {
+		margin: 0;
+
+		&__basket {
+			width: 100%;
+			max-width: 18.75rem;
+			height: 40px;
+			background-color: $color-cinnabar;
+			color: $color-default-white;
+			padding: 10px;
+			transition: background-color 0.3s;
+			border: 2px solid transparent;
+
+			span {
+				display: block
+			}
+		}
+
+		&__basket-icon {
+			display: none;
+		}
+	}
+}

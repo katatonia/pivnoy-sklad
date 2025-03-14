@@ -1,0 +1,27 @@
+.favorite {
+	position: relative;
+	min-width: 1.875rem;
+	height: 1.875rem;
+	background-color: $color-cinnabar;
+	border: 2px solid transparent;
+	cursor: pointer;
+	transition: .3s;
+
+	&__icon {
+		content: '';
+		position: absolute;
+		width: 1.5rem;
+		height: 1.5rem;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		stroke: $color-default-white;
+		cursor: pointer;
+		color: transparent;
+
+		&_is-active {
+			color: $color-default-white;
+			stroke: $color-default-white;
+		}
+	}
+}
