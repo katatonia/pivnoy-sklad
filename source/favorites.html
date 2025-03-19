@@ -1,4 +1,3 @@
-</html>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -155,10 +154,10 @@
 
 		<main class="main">
 
-			<section class="catalog">
-				<div class="catalog__body container">
-					<div class="catalog__header">
-						<h1 class="catalog__title">Каталог</h1>
+			<section class="favorites-page">
+				<div class="container">
+					<div class="favorites-page__header">
+						<h1 class="favorites-page__title">Избранное</h1>
 						<div class="filter-nav">
 							<div class="filter-nav__search-wrapper">
 								<div class="filter-nav__search">
@@ -169,7 +168,7 @@
 										<input type="search" name="search">
 									</label>
 								</div>
-								<buttob class="filter-nav__search-button button">Поиск</buttob>
+								<button class="filter-nav__search button button">Поиск</button>
 							</div>
 							<div class="filter-nav__button">
 								<svg width="24" height="24">
@@ -301,44 +300,88 @@
 						</div>
 						<button class="catalog__filter-apply button">Применить</button>
 					</div>
-					<ul class="catalog__list">
-						<li class="catalog__item card">
-							<div class="card__img-wrapper">
-								<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
-								<button class="favorite">
-									<svg class="favorite__icon" width="24" height="24">
-										<use xlink:href="icons/sprite.svg#favorite"></use>
-									</svg>
-								</button>
-							</div>
-							<div class="card__body">
-								<div class="card__title">
-									<span class="card__brewery">Plague Brew</span>
-									<span class="card__name">Forester</span>
-									<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
-									<span class="card__price">215 ₽/шт</span>
+					<div class="favorites-page__list">
+						<li class="favorites__item">
+							<div class="card">
+								<div class="card__img-wrapper">
+									<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+									<button class="favorite">
+										<svg class="favorite__icon" width="24" height="24">
+											<use xlink:href="icons/sprite.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="card__body">
+									<div class="card__title">
+										<span class="card__brewery">Plague Brew</span>
+										<span class="card__name">Forester</span>
+										<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+									</div>
+								</div>
+								<div class="card__buttons">
+									<a class="card__link" href="product.html">Подробнее
+										<svg width="24" height="24">
+											<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+										</svg>
+									</a>
+									<button class="card__button button">Добавить в корзину</button>
 								</div>
 							</div>
-							<div class="card__buttons">
-								<a class="card__link" href="product.html">Подробнее
-									<svg width="24" height="24">
-										<use xlink:href="icons/sprite.svg#arrow-slider"></use>
-									</svg>
-								</a>
-								<button class="card__button button">Добавить в корзину</button>
+						</li>
+						<li class="favorites__item">
+							<div class="card">
+								<div class="card__img-wrapper">
+									<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+									<button class="favorite">
+										<svg class="favorite__icon" width="24" height="24">
+											<use xlink:href="icons/sprite.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="card__body">
+									<div class="card__title">
+										<span class="card__brewery">Plague Brew</span>
+										<span class="card__name">Forester</span>
+										<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+									</div>
+								</div>
+								<div class="card__buttons">
+									<a class="card__link" href="product.html">Подробнее
+										<svg width="24" height="24">
+											<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+										</svg>
+									</a>
+									<button class="card__button button">Добавить в корзину</button>
+								</div>
 							</div>
 						</li>
-					</ul>
-					<div class="pagination">
-						<svg class="pagination__arrow pagination__arrow_prev" width="24" height="24">
-							<use xlink:href="icons/sprite.svg#arrow-slider"></use>
-						</svg>
-						<span class="pagination__page pagination__page_first">1</span>
-						<span>/</span>
-						<span class="pagination__page pagination__page_last">6</span>
-						<svg class="pagination__arrow pagination__arrow_next" width="24" height="24">
-							<use xlink:href="icons/sprite.svg#arrow-slider"></use>
-						</svg>
+						<li class="favorites__item">
+							<div class="card">
+								<div class="card__img-wrapper">
+									<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+									<button class="favorite">
+										<svg class="favorite__icon" width="24" height="24">
+											<use xlink:href="icons/sprite.svg#favorite"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="card__body">
+									<div class="card__title">
+										<span class="card__brewery">Plague Brew</span>
+										<span class="card__name">Forester</span>
+										<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+									</div>
+								</div>
+								<div class="card__buttons">
+									<a class="card__link" href="product.html">Подробнее
+										<svg width="24" height="24">
+											<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+										</svg>
+									</a>
+									<button class="card__button button">Добавить в корзину</button>
+								</div>
+							</div>
+						</li>
 					</div>
 				</div>
 			</section>

@@ -40,8 +40,6 @@
 
 </head>
 
-</head>
-
 <body>
 
 	<div class="wrapper">
@@ -82,9 +80,7 @@
 									<use xlink:href="icons/sprite.svg#login"></use>
 								</svg>
 							</a>
-							<button class="nav-icons__login-btn button">
-								<a href="#">Войти</a>
-							</button>
+							<a class="nav-icons__login-btn button" href="#">Войти</a>
 						</li>
 						<li class="nav-icons__item nav-icons__item_hamburger">
 							<a class="nav-icons__link nav-icons__link_title" href="#">Каталог</a>
@@ -94,17 +90,15 @@
 								</svg>
 							</a>
 						</li>
-						<li class="nav-icons__item nav-icons__item_cancel">
-							<a class="nav-icons__link" href="#">
-								<svg width="24" height="24">
-									<use xlink:href="icons/sprite.svg#cancel"></use>
-								</svg>
-							</a>
-						</li>
 					</ul>
 					<nav class="nav">
 						<div class="container">
-							<h2 class="nav__title">Каталог</h2>
+							<div class="nav__header">
+								<h2 class="nav__title">Каталог</h2>
+								<svg class="nav__close" width="24" height="24">
+									<use xlink:href="icons/sprite.svg#cancel"></use>
+								</svg>
+							</div>
 							<ul class="nav__list">
 								<li class="nav__item">
 									<span class="nav__subtitle nav__subtitle_new">Новинки
@@ -133,7 +127,7 @@
 							</ul>
 						</div>
 					</nav>
-					<div class="orders">
+					<!-- <div class="orders">
 						<div class="container">
 							<button class="orders__button">
 								<svg width="24" height="24">
@@ -149,21 +143,28 @@
 								</li>
 							</ul>
 						</div>
+					</div> -->
+				</div>
+				<div class="headling">
+					<div class="container">
+						<div class="headling__body">
+							<div class="headling__image">
+								<img src="images/login_bg.jpg" alt="">
+							</div>
+							<div class="headerling__intro">
+								<h1 class="headling__title">Bottle shop</h1>
+								<p class="headling__text">
+									Боттлшоп крафтового пива, сидра, мидов и безалкогольных напитков
+									по оптовым ценам.
+									Больше 100 наименований российского крафта и мировые бестселлеры.</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</header>
 
 		<main class="main">
-
-			<!-- <div class="headling">
-				<div class="headling__body container">
-					<h1 class="headling__title">Bottle<br>shop</h1>
-				</div>
-				<div class="headling__bg bg-img">
-					<img src="images/login_bg.jpg" alt="Стеллаж">
-				</div>
-			</div> -->
 
 			<section class="new">
 				<div class="new__body container">
@@ -175,38 +176,55 @@
 					<div class="new__slider slider">
 						<ul class="slider__list">
 							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
+								<div class="card">
+									<div class="card__img-wrapper">
+										<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+										<button class="favorite">
+											<svg class="favorite__icon" width="24" height="24">
+												<use xlink:href="icons/sprite.svg#favorite"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="card__body">
+										<div class="card__title">
+											<span class="card__brewery">Plague Brew</span>
+											<span class="card__name">Essenbach</span>
+											<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+										</div>
+									</div>
+									<div class="card__buttons">
+										<a class="card__link" href="product.html">Подробнее
+											<svg width="24" height="24">
+												<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</li>
 							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
-								</div>
-							</li>
-							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
-								</div>
-							</li>
-							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
-								</div>
-							</li>
-							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/forester.png" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
+								<div class="card">
+									<div class="card__img-wrapper">
+										<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+										<button class="favorite">
+											<svg class="favorite__icon" width="24" height="24">
+												<use xlink:href="icons/sprite.svg#favorite"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="card__body">
+										<div class="card__title">
+											<span class="card__brewery">Plague Brew</span>
+											<span class="card__name">Essenbach</span>
+											<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+										</div>
+									</div>
+									<div class="card__buttons">
+										<a class="card__link" href="product.html">Подробнее
+											<svg width="24" height="24">
+												<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</li>
 						</ul>
@@ -236,38 +254,81 @@
 					<div class="leaders__slider slider">
 						<ul class="slider__list">
 							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
+								<div class="card">
+									<div class="card__img-wrapper">
+										<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+										<button class="favorite">
+											<svg class="favorite__icon" width="24" height="24">
+												<use xlink:href="icons/sprite.svg#favorite"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="card__body">
+										<div class="card__title">
+											<span class="card__brewery">Plague Brew</span>
+											<span class="card__name">Essenbach</span>
+											<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+										</div>
+									</div>
+									<div class="card__buttons">
+										<a class="card__link" href="product.html">Подробнее
+											<svg width="24" height="24">
+												<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</li>
 							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
+								<div class="card">
+									<div class="card__img-wrapper">
+										<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+										<button class="favorite">
+											<svg class="favorite__icon" width="24" height="24">
+												<use xlink:href="icons/sprite.svg#favorite"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="card__body">
+										<div class="card__title">
+											<span class="card__brewery">Plague Brew</span>
+											<span class="card__name">Essenbach</span>
+											<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+										</div>
+									</div>
+									<div class="card__buttons">
+										<a class="card__link" href="product.html">Подробнее
+											<svg width="24" height="24">
+												<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</li>
 							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
-								</div>
-							</li>
-							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/product.jpg" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
-								</div>
-							</li>
-							<li class="slider__item">
-								<img class="slider__img" width="400" height="400" src="images/forester.png" alt="#">
-								<div class="slider__desc">
-									<span class="slider__brewery">Plague Brew</span>
-									<span class="slider__name">Essenbach</span>
+								<div class="card">
+									<div class="card__img-wrapper">
+										<img class="card__img" src="images/product.jpg" width="320" height="320" alt="">
+										<button class="favorite">
+											<svg class="favorite__icon" width="24" height="24">
+												<use xlink:href="icons/sprite.svg#favorite"></use>
+											</svg>
+										</button>
+									</div>
+									<div class="card__body">
+										<div class="card__title">
+											<span class="card__brewery">Plague Brew</span>
+											<span class="card__name">Essenbach</span>
+											<span class="card__style">Пшеничное пиво (Wheat Beer)</span>
+										</div>
+									</div>
+									<div class="card__buttons">
+										<a class="card__link" href="product.html">Подробнее
+											<svg width="24" height="24">
+												<use xlink:href="icons/sprite.svg#arrow-slider"></use>
+											</svg>
+										</a>
+									</div>
 								</div>
 							</li>
 						</ul>
@@ -312,13 +373,12 @@
 											коронную линейку грибных&nbsp;гозе.
 										</span>
 									</p>
-									<button class="project__button button">
-										<a class="project__link" href="https://untappd.com/PlagueBrew">Untappd
-											<svg width="12" height="12">
-												<use xlink:href="icons/sprite.svg#arrow-title"></use>
-											</svg>
-										</a>
-									</button>
+									<a class="project__button button project__link"
+										href="https://untappd.com/PlagueBrew">Untappd
+										<svg width="12" height="12">
+											<use xlink:href="icons/sprite.svg#arrow-title"></use>
+										</svg>
+									</a>
 								</div>
 							</div>
 							<div class="project">
@@ -338,13 +398,12 @@
 											а&nbsp;также эксклюзивный&nbsp;импорт.
 										</span>
 									</p>
-									<button class="project__button button">
-										<a class="project__link" href="https://taplink.cc/hophuntingclub ">taplink
-											<svg width="12" height="12">
-												<use xlink:href="icons/sprite.svg#arrow-title"></use>
-											</svg>
-										</a>
-									</button>
+									<a class="project__button button project__link"
+										href="https://taplink.cc/hophuntingclub ">taplink
+										<svg width="12" height="12">
+											<use xlink:href="icons/sprite.svg#arrow-title"></use>
+										</svg>
+									</a>
 								</div>
 							</div>
 							<div class="project">
@@ -372,13 +431,12 @@
 											и&nbsp;<span class="no-wrap">мастер-классы</span> по&nbsp;пивоварению.
 										</span>
 									</p>
-									<button class="project__button button">
-										<a class="project__link" href="https://fermentor.ru">fermentor.ru
-											<svg width="12" height="12">
-												<use xlink:href="icons/sprite.svg#arrow-title"></use>
-											</svg>
-										</a>
-									</button>
+									<a class="project__button button project__link"
+										href="https://fermentor.ru">fermentor.ru
+										<svg width="12" height="12">
+											<use xlink:href="icons/sprite.svg#arrow-title"></use>
+										</svg>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -526,6 +584,59 @@
 			</div>
 		</footer>
 
+	</div>
+
+	<!-- Затемнение фона -->
+	<div class="overlay"></div>
+
+	<!-- Боковая панель корзины -->
+	<div class="cart-sidebar">
+		<div class="cart-sidebar__content">
+			<div class="cart-sidebar__header">
+				<h2>Корзина</h2>
+				<svg class="cart-sidebar__close" width="24" height="24">
+					<use xlink:href="icons/sprite.svg#cancel"></use>
+				</svg>
+			</div>
+
+			<div class="cart-sidebar__body">
+				<div class="cart-item">
+					<svg class="cart-item__delete" width="24" height="24">
+						<use xlink:href="icons/sprite.svg#cancel"></use>
+					</svg>
+					<div class="cart-item__title">
+						<span class="cart-item__brewery">Plague Brew</span>
+						<span class="cart-item__name">Essenbach</span>
+					</div>
+					<div class="cart-item__body">
+						<img class="cart-item__img" src="images/forester.png" width="80" height="80" alt="">
+						<div class="cart-item__desc">
+							<span class="cart-item__volume">Банка 0,45л</span>
+							<span class="cart-item__amount">В наличии 42 шт</span>
+							<span class="cart-item__price">215 ₽/шт</span>
+						</div>
+					</div>
+					<div class="cart-item__footer">
+						<div class="counter">
+							<div class="counter__body">
+								<svg class="counter__minus" width="24" height="24">
+									<use xlink:href="icons/sprite.svg#minus"></use>
+								</svg>
+								<span class="counter__number">1</span>
+								<svg class="counter__plus" width="24" height="24">
+									<use xlink:href="icons/sprite.svg#plus"></use>
+								</svg>
+							</div>
+							<span class="counter__result">215 ₽</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cart-sidebar__footer">
+				<button class="cart-sidebar__checkout button">Перейти в корзину</button>
+			</div>
+		</div>
 	</div>
 
 	<!-- Подкдючение карты -->

@@ -1,8 +1,8 @@
 .project {
 	display: flex;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	justify-content: flex-end;
-	gap: 4rem;
+	// gap: 4rem;
 	flex: 0 0 min(100%, 727px);
 
 	&__block {
@@ -14,35 +14,45 @@
 			justify-content: space-between;
 		}
 
-		&_left {
-			display: none;
-		}
+		// &_left {
+		// 	display: none;
+		// }
 	}
 
 	&__logo {
 		display: block;
-		max-width: 12.5rem;
-		width: 100%;
+		// max-width: 12.5rem;
+		width: 120px;
+		// width: 100%;
 		height: auto;
-		margin: 0 auto;
+		// margin: 0 auto;
 
 		&_fermentor {
-			max-width: 15.625rem;
+			max-width: 11.25rem;
+			// max-width: 15.625rem;
 		}
 	}
 
 	&__photo {
-		max-width: 18.75rem;
-		max-height: 28.125rem;
+		// max-width: 18.75rem;
+		// max-height: 28.125rem;
 		width: 100%;
 		height: 100%;
+
+		width: 200px;
+		margin-left: auto;
 	}
 
 	&__text {
 		display: flex;
 		flex-direction: column;
-		gap: .5rem;
-		margin: 2rem 0 2.875rem;
+		// gap: .5rem;
+		// margin: 2rem 0 2.875rem;
+
+		padding: 2rem 20px 2.875rem;
+		width: 80%;
+		background-color: black;
+		color: white;
 	}
 
 	&__button {
@@ -54,14 +64,6 @@
 
 		svg {
 			fill: $color-default-white;
-		}
-
-		&:hover svg {
-			fill: $color-cinnabar;
-		}
-
-		&:hover a {
-			color: $color-cinnabar;
 		}
 	}
 

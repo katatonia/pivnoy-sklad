@@ -3,7 +3,11 @@
 	gap: .5rem;
 	justify-content: center;
 
-	&__button {
+	&__arrow {
 		cursor: pointer;
+
+		&_next {
+			transform: scale(-1);
+		}
 	}
 }

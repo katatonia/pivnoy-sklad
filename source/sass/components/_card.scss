@@ -8,15 +8,14 @@
 		.favorite {
 			position: absolute;
 			top: 0;
-			right: 0;
+			left: 0;
 		}
 	}
 
 	&__body {
-		background-color: $color-default-white;
 		display: flex;
 		flex-direction: column;
-		padding: 1.5rem .75rem .75rem;
+		padding: 0.75rem 0.75rem 0.75rem 0;
 	}
 
 	&__title {
@@ -24,9 +23,39 @@
 		flex-direction: column;
 	}
 
+	&__brewery {
+		font-size: 0.875rem
+	}
+
+	&__name {
+		font-size: 1.125rem;
+	}
+
+	&__style {
+		font-size: .75rem;
+		margin-bottom: .5rem;
+	}
+
 	&__link {
-		margin: 0 auto;
-		border-bottom: 2px solid;
+		font-size: 0.875rem;
+		display: flex;
+		gap: .5rem;
+		text-transform: lowercase;
 		cursor: pointer;
+		margin-bottom: .5rem;
+		color: inherit;
+
+		svg {
+			transform: scale(-1);
+		}
+	}
+
+	&__button {
+		font-size: .875rem;
+		margin: 0 auto;
+	}
+
+	&__buttons {
+		margin-top: auto;
 	}
 }

@@ -1,0 +1,43 @@
+.filter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: $color-mint-cream;
+	padding: 2.5rem .625rem;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+	transform: translateX(100%);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1003;
+
+	&_is-active {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s;
+		box-shadow: 0 1px 10px 0px rgba(0, 0, 0, .1);
+	}
+
+	&__close {
+		position: absolute;
+		top: 1.25rem;
+		left: .625rem;
+		stroke: $color-black-magic;
+		cursor: pointer;
+	}
+
+	&__apply {
+		margin: 0 auto;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		margin: 2.5rem 0 3.5rem;
+		border-top: 1px solid;
+	}
+}

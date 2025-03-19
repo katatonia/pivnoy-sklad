@@ -1,6 +1,6 @@
-.catalog {
-	position: relative;
+.favorites-page {
 	padding: 5rem 0;
+	position: relative;
 
 	&__header {
 		display: flex;
@@ -16,6 +16,13 @@
 		}
 
 		margin-bottom: 1.5rem;
+	}
+
+	&__orders {
+		display: flex;
+		row-gap: 1rem;
+		column-gap: .5rem;
+		flex-wrap: wrap;
 	}
 
 	&__list {
@@ -37,6 +44,12 @@
 	}
 
 	@media screen and (min-width: $vp-768) {
+		padding: 6.25rem 0;
+
+		&__title {
+			font-size: 3.062rem;
+		}
+
 		&__list {
 			grid-template-columns: repeat(3, minmax(180px, 1fr));
 		}
@@ -45,6 +58,14 @@
 	@media screen and (min-width: 1020px) {
 		&__list {
 			grid-template-columns: repeat(4, minmax(168px, 1fr));
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		padding: 7.5rem 0;
+
+		&__title {
+			font-size: 3.812rem;
 		}
 	}
 

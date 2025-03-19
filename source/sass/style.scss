@@ -12,6 +12,11 @@
 @import "components/_card.scss";
 @import "components/_favorite.scss";
 @import "components/_counter.scss";
+@import "components/_pagination.scss";
+@import "components/_select.scss";
+@import "components/_filter.scss";
+@import "components/_filter-element.scss";
+@import "components/_filter-nav.scss";
 
 /* GENERAL BLOCKS */
 /* header */
@@ -19,6 +24,7 @@
 @import "blocks/_nav-icons.scss";
 @import "blocks/_nav.scss";
 @import "blocks/_orders.scss";
+@import "blocks/_cart-sidebar.scss";
 
 /* footer */
 @import "blocks/_footer.scss";
@@ -53,5 +59,9 @@
 
 /* CATALOG */
 @import "blocks/_catalog.scss";
-@import "blocks/_filter.scss";
-@import "blocks/_pagination.scss";
+
+/* ORDER */
+@import "blocks/_orders-page.scss";
+
+/* FAVORITES */
+@import "blocks/_favorites-page.scss";

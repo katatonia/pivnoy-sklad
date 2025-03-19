@@ -1,0 +1,77 @@
+.select {
+	display: flex;
+	flex-direction: column;
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	&__header {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		height: 2.5rem;
+		padding: .5rem;
+		border: 1px solid $color-quartz;
+		background-color: $color-default-white;
+		cursor: pointer;
+	}
+
+	&__current {
+		cursor: pointer;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	&__body {
+		border-top: 0;
+		display: none;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		border: 1px solid $color-quartz;
+		background-color: $color-default-white;
+		border-top: none;
+		overflow: auto;
+		max-height: 8.75rem;
+	}
+
+	&__wrapper.is-active .select__body {
+		display: block;
+		z-index: 2;
+	}
+
+	&__arrow {
+		width: .75rem;
+		height: .75rem;
+		stroke: $color-black-magic;
+	}
+
+	&__item {
+		cursor: pointer;
+		padding: .625rem;
+		margin-left: auto;
+
+		&:hover {
+			background-color: $color-quartz;
+		}
+	}
+
+	&__button {
+		margin: 0 auto;
+		margin-top: 1.5rem;
+	}
+
+	@media screen and (min-width: $vp-576) {
+		flex-direction: row;
+        justify-content: space-between;
+		gap: .5rem;
+
+		&__button {
+			margin: 0;
+		}
+	}
+}

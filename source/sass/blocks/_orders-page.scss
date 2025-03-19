@@ -1,0 +1,29 @@
+.orders-page {
+	padding: 5rem 0;
+
+	&__title {
+		font: {
+			size: 2rem;
+			weight: 800;
+		}
+
+		color: $color-watercourse;
+		margin-bottom: 1.5rem;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		padding: 6.25rem 0;
+
+		&__title {
+			font-size: 3.062rem;
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		padding: 7.5rem 0;
+
+		&__title {
+			font-size: 3.812rem;
+		}
+	}
+}

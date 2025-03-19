@@ -21,8 +21,11 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		padding: 2rem 1.25rem;
-		background-color: $color-default-white;
+		padding: 0.625rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		form {
 			display: flex;
@@ -45,19 +48,13 @@
 			height: 2rem;
 			border: none;
 			outline: none;
-			border-bottom: 2px solid $color-default-white;
+			border-bottom: 1.5px solid $color-default-white;
 			padding-left: 2rem;
 		}
 	}
 
 	&__button {
 		margin-top: 2.5rem;
-	}
-
-	@media screen and (min-width: $vp-768)  {
-		&__form {
-			padding: 40px 1.5rem;
-		}
 	}
 
 	@media screen and (min-width: $vp-1200) {

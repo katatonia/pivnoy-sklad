@@ -29,10 +29,6 @@
 			height: 1.5rem;
 			stroke: $color-default-white;
 			transition: 0.3s;
-
-			&:hover {
-				stroke: $color-cinnabar;
-			}
 		}
 	}
 
@@ -93,7 +89,7 @@
 			transition: 0.3s;
 
 			&:hover {
-				color: $color-cinnabar;
+				opacity: .8;
 			}
 		}
 

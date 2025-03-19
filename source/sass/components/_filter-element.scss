@@ -1,5 +1,7 @@
-.filter {
+.filter-element {
 	overflow: hidden;
+	padding: 1.25rem 0;
+	border-bottom: 1px solid;
 
 	&__header {
 		cursor: pointer;
@@ -7,10 +9,11 @@
 		position: relative;
 	}
 
-	&__header-title {
+	&__title {
 		display: flex;
 		align-items: center;
 		gap: .5rem;
+		justify-content: space-between;
 	}
 
 	&__arrow {
@@ -22,7 +25,7 @@
 	&__selected {
 		display: block;
 		font-weight: normal;
-		margin-top: 5px;
+		margin: .5rem 0;
 		font-size: 14px;
 	}
 
@@ -46,5 +49,8 @@
 
 	&__content ul li input {
 		margin-right: 10px;
+		width: 1.5rem;
+		height: 1.5rem;
+		border: 1px solid;
 	}
 }

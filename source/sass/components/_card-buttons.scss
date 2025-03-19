@@ -8,7 +8,7 @@
 		min-width: 2.5rem;
 		height: 2.5rem;
 		background-color: $color-cinnabar;
-		border: 2px solid transparent;
+		border: 1.5px solid transparent;
 		cursor: pointer;
 		transition: .3s;
 
@@ -46,7 +46,7 @@
 			color: $color-default-white;
 			padding: 10px;
 			transition: background-color 0.3s;
-			border: 2px solid transparent;
+			border: 1.5px solid transparent;
 
 			span {
 				display: block

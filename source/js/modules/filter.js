@@ -1,23 +1,26 @@
 export const filter = () => {
-    const filterButton = document.querySelector(".catalog__filter-button");
-    const filterList = document.querySelector(".catalog__filter-list");
-    const filterClose = document.querySelector(".catalog__filter-close");
+    const filterButton = document.querySelector(".filter-nav__button");
+    const filterList = document.querySelector(".filter");
+    const filterClose = document.querySelector(".filter__close");
+	const overlay = document.querySelector(".overlay");
 
     if (filterButton && filterList) {
         filterButton.addEventListener("click", () => {
-            filterList.classList.toggle("catalog__filter-list_is-active");
+            filterList.classList.toggle("filter_is-active");
+			overlay.classList.add("open");
         });
     }
 
     if (filterClose && filterList) {
         filterClose.addEventListener("click", () => {
-            filterList.classList.remove("catalog__filter-list_is-active");
+            filterList.classList.remove("filter_is-active");
+			overlay.classList.remove("open");
         });
     }
 
-    document.querySelectorAll(".filter__header").forEach(header => {
+    document.querySelectorAll(".filter-element__header").forEach(header => {
         header.addEventListener("click", () => {
-            document.querySelectorAll(".filter__content").forEach(content => {
+            document.querySelectorAll(".filter-element__content").forEach(content => {
                 if (content !== header.nextElementSibling) {
                     content.style.display = "none";
                 }
@@ -27,7 +30,7 @@ export const filter = () => {
         });
     });
 
-    document.querySelectorAll(".filter__content ul li").forEach(item => {
+    document.querySelectorAll(".filter-element__content ul li").forEach(item => {
         item.addEventListener("click", event => {
             if (!event.target.matches("input")) {
                 const checkbox = item.querySelector("input");
@@ -39,11 +42,11 @@ export const filter = () => {
         });
     });
 
-    document.querySelectorAll(".filter__content ul li input").forEach(checkbox => {
+    document.querySelectorAll(".filter-element__content ul li input").forEach(checkbox => {
         checkbox.addEventListener("change", () => {
-            const filterContent = checkbox.closest(".filter__content");
+            const filterContent = checkbox.closest(".filter-element__content");
             const filterHeader = filterContent ? filterContent.previousElementSibling : null;
-            const selectedText = filterHeader ? filterHeader.querySelector(".filter__selected") : null;
+            const selectedText = filterHeader ? filterHeader.querySelector(".filter-element__selected") : null;
 
             if (selectedText) {
                 const selectedItems = Array.from(filterContent.querySelectorAll("input:checked"))

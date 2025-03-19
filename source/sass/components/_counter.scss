@@ -2,7 +2,6 @@
 	display: flex;
 	gap: 1rem;
 	align-items: center;
-	flex-direction: column;
 	margin: .5rem 0;
 
 	&__result {
@@ -15,7 +14,7 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 		width: 7.5rem;
-		border: 2px solid $color-cinnabar;
+		border: 1.5px solid $color-cinnabar;
 	}
 
 	&__number {

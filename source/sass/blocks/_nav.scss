@@ -1,15 +1,16 @@
 .nav {
 	position: fixed;
-	top: 5.3125rem;
+	top: 0;
 	right: -100%;
-	width: 100%;
+	width: 90vw;
 	height: 100vh;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: $color-floral-white;
-	padding: 2.5rem 0;
+	background-color: $color-mint-cream;
+	padding: 0 0 2.5rem;
 	transition: 0.3s;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
 	opacity: 0;
 	visibility: hidden;
 
@@ -17,17 +18,27 @@
 		right: 0;
 		opacity: 1;
 		visibility: visible;
-		z-index: 10;
+		z-index: 1004;
 	}
 
-	&__title {
-		margin-bottom: 1.5rem
+	&__header {
+		height: 5.3125rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #ddd;
+	}
+
+	&__close {
+		cursor: pointer;
+		stroke: black;
 	}
 
 	&__list {
 		@include flex-column;
 
 		gap: 1.25rem;
+		margin-top: 2.5rem;
 	}
 
 	&__item {
@@ -65,6 +76,12 @@
 		left: 0;
 		height: auto;
 		box-shadow: 0 1px 10px 0px rgba(0,0,0,.1);
+		width: 100%;
+		top: 5.3125rem;
+
+		&__header {
+			display: none;
+		}
 
 		&__title {
 			display: none;
