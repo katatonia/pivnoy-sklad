@@ -1,23 +1,9 @@
 .order-check {
 	padding: 5rem 0;
 
-	&__title {
-		font: {
-			size: 2rem;
-			weight: 500;
-		}
-
-		color: $color-watercourse;
-		margin-bottom: 1.5rem;
-	}
-
 	&__wrapper {
 		margin-top: 2rem;
 		width: 100%;
-	}
-
-	&__title {
-		margin-bottom: 2rem;
 	}
 
 	&__form {
@@ -70,17 +56,9 @@
 
 	@media screen and (min-width: $vp-768) {
 		padding: 6.25rem 0;
-
-		&__title {
-			font-size: 3.062rem;
-		}
 	}
 
 	@media screen and (min-width: $vp-1200) {
 		padding: 7.5rem 0;
-
-		&__title {
-			font-size: 3.812rem;
-		}
 	}
 }
