@@ -1,0 +1,47 @@
+.projects {
+	padding: 5rem 0;
+	background-color: $color-my-sin-rgba;
+
+	&__body {
+		max-width: max-content;
+	}
+
+	&__list {
+		gap: 1.875rem;
+	}
+
+
+	&__title {
+		svg {
+			width: 1rem;
+			height: 1rem;
+			stroke: $color-watercourse;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: minmax(17.5rem, 1fr);
+		overflow-x: auto;
+		overflow-y: hidden;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		padding: 6.25rem 0;
+
+		&__title {
+			svg {
+				width: 1.5rem;
+				height: 1.5rem;
+				stroke: $color-watercourse;
+			}
+		}
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		padding: 7.5rem 0;
+	}
+}

@@ -17,6 +17,7 @@
 @import "components/_filter.scss";
 @import "components/_filter-element.scss";
 @import "components/_filter-nav.scss";
+@import "components/_sticky-cart.scss";
 
 /* GENERAL BLOCKS */
 /* header */
@@ -40,7 +41,7 @@
 @import "blocks/_new.scss";
 @import "blocks/_leaders.scss";
 @import "blocks/_slider.scss";
-@import "blocks/_projects-section.scss";
+@import "blocks/_projects.scss";
 @import "blocks/_project.scss";
 @import "blocks/_location.scss";
 
@@ -56,12 +57,15 @@
 /* CART */
 @import "blocks/_cart.scss";
 @import "blocks/_cart-item.scss";
+@import "blocks/_cart-modal.scss";
 
 /* CATALOG */
 @import "blocks/_catalog.scss";
 
-/* ORDER */
-@import "blocks/_orders-page.scss";
+/* ORDERS */
+@import "blocks/_order-check.scss";
+@import "blocks/_order-approve.scss";
+@import "blocks/_order-modal.scss";
 
 /* FAVORITES */
 @import "blocks/_favorites-page.scss";

@@ -6,7 +6,7 @@
 	height: 100vh;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: $color-mint-cream;
+	background-color: $color-default-white;
 	padding: 0 0 2.5rem;
 	transition: 0.3s;
 	overflow-x: hidden;
@@ -26,41 +26,46 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid $color-quartz;
+	}
+
+	&__title {
+		font-weight: 500;
 	}
 
 	&__close {
 		cursor: pointer;
-		stroke: black;
+		stroke: $color-silver;
 	}
 
 	&__list {
 		@include flex-column;
 
-		gap: 1.25rem;
-		margin-top: 2.5rem;
+		margin-top: 1rem;
 	}
 
 	&__item {
 		@include flex-column;
 
-		margin-bottom: .5rem;
+		padding: 1rem 0;
+		border-bottom: 1px solid $color-quartz;
 	}
 
 	&__subtitle {
-		font-weight: 800;
+		font-weight: 500;
 		margin-bottom: 1rem;
 
-		&_new,
-		&_leaders {
-			margin-bottom: 0;
+		&_category,
+		&_category,
+		&_category {
+			margin-bottom: .5rem;
 			cursor: pointer;
 		}
 	}
 
 	&__link {
 		display: block;
-		font-weight: 500;
+		font-weight: 400;
 		cursor: pointer;
 	}
 
@@ -69,13 +74,19 @@
 			@include flex-row-wrap;
 
 			justify-content: space-between;
+			gap: 1.5rem;
+			flex-wrap: wrap;
+		}
+
+		&__item {
+			border: none;
 		}
 	}
 
 	@media screen and (min-width: $vp-1200) {
 		left: 0;
 		height: auto;
-		box-shadow: 0 1px 10px 0px rgba(0,0,0,.1);
+		box-shadow: 0 1px 10px 0px rgba(0, 0, 0, .1);
 		width: 100%;
 		top: 5.3125rem;
 

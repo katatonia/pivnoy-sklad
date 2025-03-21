@@ -32,6 +32,8 @@
 			flex-direction: column;
 			align-items: center;
 			gap: 1.5rem;
+			padding: 2.5rem 1.25rem;
+			background-color: $color-default-white;
 		}
 	}
 
@@ -41,6 +43,7 @@
 		svg {
 			position: absolute;
 			bottom: .5rem;
+			stroke: $color-watercourse;
 		}
 
 		input {
@@ -48,13 +51,13 @@
 			height: 2rem;
 			border: none;
 			outline: none;
-			border-bottom: 1.5px solid $color-default-white;
+			border-bottom: 1.5px solid $color-quartz;
 			padding-left: 2rem;
 		}
 	}
 
 	&__button {
-		margin-top: 2.5rem;
+		margin-top: 2rem;
 	}
 
 	@media screen and (min-width: $vp-1200) {

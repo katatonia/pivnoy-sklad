@@ -2,8 +2,6 @@
 	position: relative;
 	min-width: 2.5rem;
 	height: 2.5rem;
-	background-color: $color-cinnabar;
-	border: 1.5px solid transparent;
 	cursor: pointer;
 	transition: .3s;
 
@@ -15,13 +13,13 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		stroke: $color-default-white;
+		stroke: $color-black-magic;
 		cursor: pointer;
 		color: transparent;
 
 		&_is-active {
-			color: $color-default-white;
-			stroke: $color-default-white;
+			color: $color-black-magic;
+			stroke: $color-black-magic;
 		}
 	}
 }

@@ -2,17 +2,12 @@
 	display: block;
 	width: 100%;
 	max-width: 18.75rem;
-	height: 40px;
-	background-color: $color-cinnabar;
+	height: 2.5rem;
 	color: $color-default-white;
-	padding: 10px;
-	transition: background-color 0.3s;
-
-	&:hover {
-		box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3);
-	}
+	padding: 0.625rem;
+	background-color: $color-cinnabar;
 
 	a {
-		color: $color-default-white;
+		color: $color-cinnabar;
 	}
 }

@@ -1,0 +1,23 @@
+.sticky-cart {
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+    z-index: 500;
+    background-color: $color-cinnabar;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, opacity 0.3s;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	svg {
+		width: 1.5rem;
+		height: 1.5rem;
+		stroke: $color-default-white;
+	}
+}

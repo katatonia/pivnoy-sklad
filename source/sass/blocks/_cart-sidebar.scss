@@ -2,9 +2,10 @@
 	position: fixed;
 	top: 0;
 	right: -100%;
-	width: 90vw;
+	width: 90%;
 	height: 100vh;
 	box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+	background-color: $color-default-white;
 	display: flex;
 	flex-direction: column;
 	transition: right 0.3s ease-in-out;
@@ -17,35 +18,49 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
 		padding: 1rem;
+		padding-top: 0;
 	}
 
 	&__header {
+		height: 5.3125rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid #ddd;
+		border-bottom: 1px solid $color-quartz;
 		padding-bottom: .625rem;
+		padding-top: 1rem;
 	}
 
 	&__close {
 		cursor: pointer;
-		stroke: black;
+		stroke: $color-silver;
 	}
 
 	&__body {
 		flex-grow: 1;
 		overflow-y: auto;
+		padding-top: 1rem;
 	}
 
 	&__footer {
 		padding: 1rem 0;
 		text-align: center;
-		border-top: 1px solid #ddd;
+		margin-top: 2.5rem;
 	}
 
 	&__checkout {
 		margin: 0 auto;
+		color: $color-default-white;
+		background-color: $color-cinnabar;
+		margin-top: auto;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		width: 50%;
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		width: 40%;
 	}
 }

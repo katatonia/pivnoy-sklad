@@ -11,35 +11,20 @@ export const initSlider = (sliderSelector, listSelector, itemSelector, prevBtnSe
 
     let currentImgIndex = 0;
     let lastPosition = 0;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
 
-    /**
-     * Определяем gap между карточками (равен значению из CSS)
-     */
     const getGap = () => parseFloat(window.getComputedStyle(sliderList).gap) || 0;
-
-    /**
-     * Получаем ширину карточки
-     */
     const getItemWidth = () => sliderItems[0]?.clientWidth || 0;
-
-    /**
-     * Определяем, сколько карточек в ряду на текущем экране
-     */
     const getVisibleItems = () => {
         const sliderWidth = sliderList.clientWidth;
         const itemWidth = getItemWidth();
         const gap = getGap();
         return itemWidth > 0 ? Math.floor((sliderWidth + gap) / (itemWidth + gap)) : 1;
     };
-
-    /**
-     * Определяем максимальный индекс карточки
-     */
     const getLastItemIndex = () => Math.max(sliderItems.length - getVisibleItems(), 0);
 
-    /**
-     * Прокручиваем слайдер на нужное расстояние
-     */
     const scrollToCurrentItem = () => {
         const itemOffset = currentImgIndex * (getItemWidth() + getGap());
         const position = Math.min(itemOffset, sliderList.scrollWidth - sliderList.clientWidth);
@@ -52,17 +37,11 @@ export const initSlider = (sliderSelector, listSelector, itemSelector, prevBtnSe
         updateButtons();
     };
 
-    /**
-     * Показываем или скрываем кнопки, если листать нельзя
-     */
     const updateButtons = () => {
         prevBtn.classList.toggle('is-hidden', currentImgIndex === 0);
         nextBtn.classList.toggle('is-hidden', currentImgIndex >= getLastItemIndex());
     };
 
-    /**
-     * Обработчик изменения размера экрана через ResizeObserver
-     */
     const resizeObserver = new ResizeObserver(() => {
         const lastItemIndex = getLastItemIndex();
         if (currentImgIndex > lastItemIndex) {
@@ -73,9 +52,6 @@ export const initSlider = (sliderSelector, listSelector, itemSelector, prevBtnSe
 
     resizeObserver.observe(sliderList);
 
-    /**
-     * Обработчики кликов по кнопкам (привязываем только к своему слайдеру)
-     */
     prevBtn.addEventListener('click', () => {
         if (currentImgIndex > 0) {
             currentImgIndex -= 1;
@@ -90,6 +66,31 @@ export const initSlider = (sliderSelector, listSelector, itemSelector, prevBtnSe
         }
     });
 
-    // Инициализация: скрываем кнопки, если листать нельзя
+    sliderList.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    sliderList.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+    });
+
+    sliderList.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        const diff = startX - currentX;
+
+        if (Math.abs(diff) > 50) { // Минимальное расстояние для свайпа
+            if (diff > 0 && currentImgIndex < getLastItemIndex()) {
+                currentImgIndex += 1;
+            } else if (diff < 0 && currentImgIndex > 0) {
+                currentImgIndex -= 1;
+            }
+            scrollToCurrentItem();
+        }
+
+        isDragging = false;
+    });
+
     updateButtons();
 };

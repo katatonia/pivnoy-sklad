@@ -47,68 +47,68 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__body">
-					<a class="header__logo" href="#">
-						<img width="180" height="66" src="icons/logo.svg" alt="Логотип Пивной склад">
+					<a class="header__logo" href="index.html">
+						<img width="80" height="63" src="icons/logo_base.svg" alt="Логотип Пивной склад">
 					</a>
 					<ul class="nav-icons">
 						<li class="nav-icons__item nav-icons__item_orders">
-							<a class="nav-icons__link nav-icons__link_title" href="#">Заказы</a>
-							<a class="nav-icons__link nav-icons__link_title" href="#">Проверка заказа</a>
-							<a class="nav-icons__link nav-icons__link_orders" href="#">
+							<a class="nav-icons__link nav-icons__link_title" href="orders.html">Заказы</a>
+							<a class="nav-icons__link nav-icons__link_orders" href="orders.html">
 								<svg width="24" height="24">
 									<use xlink:href="icons/sprite.svg#orders"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="nav-icons__item nav-icons__item_favorite">
-							<a class="nav-icons__link" href="#">
+							<a class="nav-icons__link" href="favorites.html">
 								<svg width="24" height="24">
 									<use xlink:href="icons/sprite.svg#favorite"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="nav-icons__item nav-icons__item_basket">
-							<a class="nav-icons__link" href="#">
+							<a class="nav-icons__link" href="cart.html">
 								<svg width="24" height="24">
 									<use xlink:href="icons/sprite.svg#basket"></use>
 								</svg>
 							</a>
 						</li>
 						<li class="nav-icons__item nav-icons__item_login">
-							<a class="nav-icons__link nav-icons__login-link" href="#">
+							<a class="nav-icons__link nav-icons__login-link" href="login.html">
 								<svg width="24" height="24">
 									<use xlink:href="icons/sprite.svg#login"></use>
 								</svg>
 							</a>
-							<button class="nav-icons__login-btn button">
-								<a href="#">Войти</a>
-							</button>
+							<a href="login.html">
+								<button class="nav-icons__login-btn button">Войти</button>
+							</a>
 						</li>
 						<li class="nav-icons__item nav-icons__item_hamburger">
-							<a class="nav-icons__link nav-icons__link_title" href="#">Каталог</a>
-							<a class="nav-icons__link nav-icons__link_hamburger" href="#">
+							<a class="nav-icons__link nav-icons__link_title" href="catalog.html">Каталог</a>
+							<span class="nav-icons__link nav-icons__link_hamburger">
 								<svg width="24" height="24">
 									<use xlink:href="icons/sprite.svg#hamburger"></use>
 								</svg>
-							</a>
-						</li>
-						<li class="nav-icons__item nav-icons__item_cancel">
-							<a class="nav-icons__link" href="#">
-								<svg width="24" height="24">
-									<use xlink:href="icons/sprite.svg#cancel"></use>
-								</svg>
-							</a>
+							</span>
 						</li>
 					</ul>
 					<nav class="nav">
 						<div class="container">
-							<h2 class="nav__title">Каталог</h2>
+							<div class="nav__header">
+								<h2 class="nav__title">Каталог</h2>
+								<svg class="nav__close" width="24" height="24">
+									<use xlink:href="icons/sprite.svg#cancel"></use>
+								</svg>
+							</div>
 							<ul class="nav__list">
 								<li class="nav__item">
-									<span class="nav__subtitle nav__subtitle_new">Новинки
+									<span class="nav__subtitle nav__subtitle_category">Новинки
 										<a class="nav__link" href="#"></a>
 									</span>
-									<span class="nav__subtitle nav__subtitle_leaders">Лидеры продаж
+									<span class="nav__subtitle nav__subtitle_category">Лидеры продаж
+										<a class="nav__link" href="#"></a>
+									</span>
+									<span class="nav__subtitle nav__subtitle_category">Пивоварни
 										<a class="nav__link" href="#"></a>
 									</span>
 								</li>
@@ -131,23 +131,6 @@
 							</ul>
 						</div>
 					</nav>
-					<div class="orders">
-						<div class="container">
-							<button class="orders__button">
-								<svg width="24" height="24">
-									<use xlink:href="icons/sprite.svg#cancel"></use>
-								</svg>
-							</button>
-							<ul class="orders__list">
-								<li class="orders__item">
-									<a href="#">Заказы</a>
-								</li>
-								<li class="orders__item">
-									<a href="#">Проверка заказа</a>
-								</li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			</div>
 		</header>
@@ -156,66 +139,71 @@
 
 			<section class="cart">
 				<div class="container">
-					<h1 class="cart__title">Корзина</h1>
-					<div class="cart__body">
-						<div class="cart-item">
-							<svg class="cart-item__delete" width="24" height="24">
-								<use xlink:href="icons/sprite.svg#cancel"></use>
-							</svg>
-							<div class="cart-item__title">
-								<span class="cart-item__brewery">Plague Brew</span>
-								<span class="cart-item__name">Essenbach</span>
-							</div>
-							<div class="cart-item__body">
-								<img class="cart-item__img" src="images/forester.png" width="80" height="80" alt="">
-								<div class="cart-item__desc">
-									<span class="cart-item__volume">Банка 0,45л</span>
-									<span class="cart-item__amount">В наличии 42 шт</span>
-									<span class="cart-item__price">215 ₽/шт</span>
-								</div>
-							</div>
-							<div class="cart-item__footer">
-								<div class="counter">
-									<div class="counter__body">
-										<svg class="counter__minus" width="24" height="24">
-											<use xlink:href="icons/sprite.svg#minus"></use>
-										</svg>
-										<span class="counter__number">1</span>
-										<svg class="counter__plus" width="24" height="24">
-											<use xlink:href="icons/sprite.svg#plus"></use>
-										</svg>
+					<h1 class="cart__title title">Корзина</h1>
+					<div class="cart__wrapper">
+						<div class="cart__body">
+							<div class="cart-item">
+								<svg class="cart-item__delete" width="24" height="24">
+									<use xlink:href="icons/sprite.svg#cancel"></use>
+								</svg>
+								<div class="cart-item__body">
+									<img class="cart-item__img" src="images/forester.png" width="80" height="80" alt="">
+									<div class="cart-item__content">
+										<div class="cart-item__title">
+											<span class="cart-item__brewery">Plague Brew</span>
+											<span class="cart-item__name">Essenbach</span>
+										</div>
+										<div class="cart-item__desc">
+											<span class="cart-item__volume">Банка 0,45л</span>
+											<span class="cart-item__amount">В наличии 42 шт</span>
+											<span class="cart-item__price">215 ₽/шт</span>
+										</div>
+										<div class="counter">
+											<div class="counter__body">
+												<svg class="counter__minus" width="24" height="24">
+													<use xlink:href="icons/sprite.svg#minus"></use>
+												</svg>
+												<span class="counter__number">1</span>
+												<svg class="counter__plus" width="24" height="24">
+													<use xlink:href="icons/sprite.svg#plus"></use>
+												</svg>
+											</div>
+											<span class="counter__result">215 ₽</span>
+										</div>
 									</div>
-									<span class="counter__result">215 ₽</span>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="cart__form">
-						<form action="#" method="POST">
-							<label class="cart__form-field" for="name">Имя
-								<input type="name" name="name">
-							</label>
-							<label class="cart__form-field" for="email">Email
-								<input type="email" name="email">
-							</label>
-							<label class="cart__form-field" for="tel">Телефон<sup>*</sup>
-								<input type="tel" name="tel" required>
-							</label>
-							<div class="cart__form-textarea">
-								<span>Комментарий к заказу</span>
-								<textarea name="comment" id="comment"></textarea>
+						<div class="cart__form">
+							<form action="#" method="POST">
+								<div class="cart__form-fields">
+									<span>Контактные данные</span>
+									<label class="cart__form-field" for="name">Имя
+										<input type="name" name="name">
+									</label>
+									<label class="cart__form-field" for="email">Email
+										<input type="email" name="email">
+									</label>
+									<label class="cart__form-field" for="tel">Телефон<sup>*</sup>
+										<input type="tel" name="tel" required>
+									</label>
+								</div>
+								<div class="cart__form-textarea">
+									<span>Комментарий к заказу</span>
+									<textarea name="comment" id="comment"></textarea>
+								</div>
+							</form>
+							<div class="cart__checkout">
+								<div class="cart__summ">
+									<span class="cart__summ-title">Итого</span>
+									<span class="cart__summ-result">215 ₽</span>
+								</div>
+								<div class="cart__qr">
+									<img src="images/qr.jpg" width="50" height="50" alt="">
+									<span>Заказать через telegram</span>
+								</div>
+								<button class="cart__form-button button">Заказать</button>
 							</div>
-						</form>
-						<div class="cart__checkout">
-							<div class="cart__summ">
-								<span class="cart__summ-title">Итого</span>
-								<span class="cart__summ-result">215 ₽</span>
-							</div>
-							<div class="cart__qr">
-								<img src="images/qr.png" width="50" height="50" alt="">
-								<span>Заказать через telegram</span>
-							</div>
-							<button class="cart__form-button button">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -225,7 +213,7 @@
 
 		<footer class="footer">
 			<div class="container">
-				<a class="footer__logo" href="#">
+				<a class="footer__logo" href="index.html">
 					<img width="180" height="66" src="icons/logo.svg" alt="Логотип Пивной склад">
 				</a>
 				<div class="footer__body">
@@ -233,35 +221,35 @@
 						<h2 class="col-1__title">Bottle shop</h2>
 						<ul class="social">
 							<li class="social__item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="https://www.instagram.com/plaguebrew">
 									<svg width="30" height="30">
 										<use xlink:href="icons/sprite.svg#instagram"></use>
 									</svg>
 								</a>
 							</li>
 							<li class="social__item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="https://vk.com/plaguebrew">
 									<svg width="30" height="30">
 										<use xlink:href="icons/sprite.svg#vk"></use>
 									</svg>
 								</a>
 							</li>
 							<li class="social__item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="https://untappd.com/PlagueBrew">
 									<svg width="30" height="30">
 										<use xlink:href="icons/sprite.svg#untappd"></use>
 									</svg>
 								</a>
 							</li>
 							<li class="social__item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="https://www.youtube.com/@-datacraft-">
 									<svg width="30" height="30">
 										<use xlink:href="icons/sprite.svg#youtube"></use>
 									</svg>
 								</a>
 							</li>
 							<li class="social__item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="https://t.me/plaguelive">
 									<svg width="30" height="30">
 										<use xlink:href="icons/sprite.svg#telegram"></use>
 									</svg>
@@ -278,7 +266,7 @@
 										<a href="tel:79217793845">+7 (921) 779-38-45</a>
 									</li>
 									<li class="contacts__item">
-										<a href="mailto:example@gmail.com">example@gmail.com</a>
+										<a href="mailto:datacraftlab@gmail.com">datacraftlab@gmail.com</a>
 									</li>
 								</ul>
 							</div>
@@ -297,10 +285,13 @@
 							</h2>
 							<ul class="menu__list">
 								<li class="menu__item">
-									<span class="menu__subtitle menu__subtitle_new">Новинки
+									<span class="menu__subtitle menu__subtitle_category">Новинки
 										<a class="menu__link" href="#"></a>
 									</span>
-									<span class="menu__subtitle menu__subtitle_leaders">Лидеры продаж
+									<span class="menu__subtitle menu__subtitle_category">Лидеры продаж
+										<a class="menu__link" href="#"></a>
+									</span>
+									<span class="menu__subtitle menu__subtitle_category">Пивоварни
 										<a class="menu__link" href="#"></a>
 									</span>
 								</li>
@@ -351,6 +342,16 @@
 
 	<!-- Затемнение фона -->
 	<div class="overlay"></div>
+
+	<div class="cart-modal" id="cartModal">
+		<div class="cart-modal__body">
+			<svg class="cart-modal__close" width="24" height="24">
+				<use xlink:href="icons/sprite.svg#cancel"></use>
+			</svg>
+			<span class="cart-modal__text cart-modal__text_add" data-message="added">Товар добавлен в корзину!</span>
+			<span class="cart-modal__text cart-modal__text_delete" data-message="deleted">Товар удалён из корзины!</span>
+		</div>
+	</div>
 
 	<!-- Подкдючение всех скриптов -->
 	<script src="js/main.js" type="module" defer></script>

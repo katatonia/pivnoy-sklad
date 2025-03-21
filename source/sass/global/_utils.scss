@@ -39,8 +39,12 @@
 }
 
 .scroll-lock {
-	overflow: hidden;
-	height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .no-scrollbar {
@@ -94,4 +98,21 @@
 .overlay.open {
     opacity: 1;
     visibility: visible;
+}
+
+.title {
+	font: {
+		weight: 500;
+		size: 1.5rem;
+	}
+	color: $color-watercourse;
+	margin-bottom: 1.5rem;
+
+	@media screen and (min-width: $vp-768) {
+		font-size: 2rem;
+	}
+
+	@media screen and (min-width: $vp-1023) {
+		font-size: 2.5rem;
+	}
 }

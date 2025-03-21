@@ -3,13 +3,6 @@
 	display: flex;
 	flex-direction: column;
 
-	&__title {
-		font: {
-			size: 2rem;
-			weight: 800;
-		}
-	}
-
 	&__body {
 		margin-bottom: 2.5rem;
 	}
@@ -17,6 +10,7 @@
 	&__form {
 		display: flex;
 		flex-direction: column;
+		max-width: 56.25rem;
 
 		form {
 			display: flex;
@@ -25,14 +19,35 @@
 		}
 	}
 
+	&__form-fields {
+		display: flex;
+		flex-direction: column;
+
+		span {
+			font: {
+				size: 1.125rem;
+				weight: 500;
+			}
+
+			;
+		}
+	}
+
 	&__form-field {
 		display: flex;
-		border-bottom: 1.5px solid;
+		align-items: center;
+		border: 1px solid $color-quartz;
+		padding: .625rem;
+		margin-bottom: 1rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 
 		input {
 			width: 100%;
 			border: none;
-			padding: 0 .5rem;
+			padding-left: .5rem;
 			outline: none;
 		}
 
@@ -47,19 +62,21 @@
 		span {
 			font: {
 				size: 1.125rem;
-				weight: 600;
-			};
+				weight: 500;
+			}
+
+			;
 		}
 
 		textarea {
 			width: 100%;
 			padding: .5rem;
-			border-width: 1.5px;
+			border: 1px solid $color-quartz;
 		}
 	}
 
 	&__checkout {
-		max-width: 20rem;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -67,18 +84,24 @@
 	}
 
 	&__summ {
+		width: 100%;
 		display: flex;
+		justify-content: space-between;
 		gap: 1rem;
+		text-transform: uppercase;
 
 		font: {
 			size: 1.125rem;
-			weight: 600;
-		};
+			weight: 500;
+		}
+
+		;
 	}
 
 	&__form-button {
-		width: 100%;
-		max-width: 20rem;
+		max-width: 100%;
+		background-color: $color-cinnabar;
+		color: $color-default-white;
 	}
 
 	&__qr {
@@ -86,38 +109,72 @@
 		gap: .5rem;
 		align-items: flex-end;
 		justify-content: flex-end;
+
+		img {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
 	}
 
 	@media screen and (min-width: $vp-576) {
-		&__checkout {
-			margin-left: 1.25rem;
-		}
-
 		&__summ {
 			font-size: 1.25rem;
 		}
 	}
 
 	@media screen and (min-width: $vp-768) {
-		&__title {
-			font-size: 3.062rem;
-		}
-
 		&__form {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			display: flex;
+			flex-direction: column;
+			margin-left: auto;
+
+			form {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+			}
 		}
 
 		&__form-textarea {
-			margin-bottom: 0;
-		}
+			margin: 0;
 
-		&__summ {
-			font-size: 1.5rem;
+			textarea {
+				margin: 0;
+			}
 		}
 
 		&__checkout {
-			margin-top: auto;
+			width: 50%;
+			margin-top: 1.25rem;
+			margin-left: auto;
+			padding-left: 1rem;
+		}
+
+		&__form-button {
+			margin: 0;
+			margin-left: auto;
+		}
+	}
+
+	@media screen and (min-width: $vp-1023) {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1.5rem;
+			margin-top: 2rem;
+		}
+
+		&__form {
+			form {
+				grid-template-columns: 1fr;
+			}
+			max-width: 100%;
+			width: 100%;
+		}
+
+		&__checkout {
+			width: 100%;
+			padding-left: 0;
 		}
 	}
 }

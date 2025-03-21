@@ -1,16 +1,14 @@
 .cart-item {
 	position: relative;
-	margin-top: 2.5rem;
-	padding: 1rem 0;
-	border-bottom: 1px solid;
+	margin-top: 1.25rem;
+	border-bottom: 1px solid $color-quartz;
 
 	&__delete {
 		position: absolute;
 		top: 0;
 		right: 0;
-		stroke: $color-black-magic;
+		stroke: $color-silver;
 		cursor: pointer;
-		margin-left: 0.75rem;
 	}
 
 	&__title {
@@ -23,10 +21,6 @@
 	}
 
 	&__name {
-		font: {
-			size: 1.125rem;
-			weight: 500;
-		}
 		margin-bottom: .75rem;
 	}
 
@@ -34,12 +28,26 @@
 		display: grid;
 		grid-template-columns: auto 1fr;
 		gap: .5rem;
+		padding-bottom: .625rem;
+
+		.counter {
+			width: 100%;
+		}
 	}
 
 	&__desc {
 		display: flex;
 		flex-direction: column;
-		font-size: .875rem;
+		font-size: .75rem;
+	}
+
+	&__img {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	&__content {
+		padding-right: 1.25rem;
 	}
 
 	@media screen and (min-width: $vp-576) {
@@ -47,19 +55,23 @@
 			width: 7.5rem;
 			height: 7.5rem;
 		}
-
-		&__desc {
-			font-size: 1rem;
-		}
 	}
 
 	@media screen and (min-width: $vp-768) {
 		&__name {
-			font-size: 2rem;
+			font-size: 1.25rem;
 		}
 
 		&__brewery {
-			font-size: 1.25rem;
+			font-size: 1rem;
 		}
+
+		&__desc {
+			font-size: 14px;
+		}
+	}
+
+	@media screen and (min-width: $vp-1023) {
+		margin-top: 0;
 	}
 }

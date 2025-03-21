@@ -1,0 +1,26 @@
+.order-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-default-white;
+    padding: 1.25rem;
+    z-index: 1001;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+	border: 1px solid $color-quartz;
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__text {
+		display: none;
+	}
+
+	&__text.show {
+		display: block;
+	}
+}

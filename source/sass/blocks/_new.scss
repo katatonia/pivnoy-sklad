@@ -1,7 +1,7 @@
 .new {
 	position: relative;
 	padding: 5rem 0;
-	background-color: $color-my-sin;
+	background-color: $color-my-sin-rgba;
 
 	&__body {
 		position: relative;
@@ -9,28 +9,38 @@
 		z-index: 3;
 	}
 
-	&__title {
-		font: {
-			size: 2rem;
-			weight: 800;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+
+		a {
+			font-size: .75rem;
+			text-transform: lowercase;
+			cursor: pointer;
+			color: $color-watercourse;
+			text-decoration: underline;
 		}
+	}
 
-		color: $color-watercourse;
-		margin-bottom: 1.5rem;
-
+	&__title {
 		svg {
-			width: 1.5rem;
-			height: 1.5rem;
-			fill: $color-watercourse;
+			width: 1rem;
+			height: 1rem;
+			stroke: $color-watercourse;
+		}
+	}
+
+	@media screen and (min-width: $vp-576) {
+		&__header {
+			a {
+				font-size: 1rem;
+			}
 		}
 	}
 
 	@media screen and (min-width: $vp-768) {
 		padding: 6.25rem 0;
-
-		&__title {
-			font-size: 3.062rem;
-		}
 
 		&__brewery {
 			font-size: 1.25rem;
@@ -39,18 +49,17 @@
 		&__name {
 			font-size: 2rem;
 		}
+
+		&__title {
+			svg {
+				width: 1.5rem;
+				height: 1.5rem;
+				stroke: $color-watercourse;
+			}
+		}
 	}
 
 	@media screen and (min-width: $vp-1200) {
 		padding: 7.5rem 0;
-
-		&__title {
-			font-size: 3.812rem;
-
-			svg {
-				width: 2rem;
-				height: 2rem;
-			}
-		}
 	}
 }

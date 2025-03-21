@@ -1,18 +1,20 @@
 /* VIEWPORTS */
-$vp-360: 							360px;
+$vp-360: 							380px;
 $vp-576: 							576px;
 $vp-768: 							768px;
+$vp-1023:							1023px;
 $vp-1200: 							1200px;
 
 /* COLORS */
-$color-default-black: 				#000;
-$color-default-white: 				#fff;
+$color-default-black: 				#000000;
+$color-default-white: 				#FFFFFF;
 $color-mint-cream:					#F3FFFC;
 $color-quartz:						#E2E1E5;
+$color-silver:						#C0C0C0;
 $color-black-magic: 				#2D2B28;
 $color-cinnabar: 					#F04E23;
 $color-watercourse: 				#025944;
-$color-my-sin: 						#FAA74A;
+$color-my-sin-rgba: 				rgba(247, 150, 102, 5%);
 $color-atomic-langerine-rgba: 		rgba(28, 19, 15, 0.2);
 $color-paris-daisy: 				#F7E24D;
 $color-amulet: 						#829A7B;

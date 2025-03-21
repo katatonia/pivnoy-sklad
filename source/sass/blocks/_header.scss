@@ -1,21 +1,21 @@
 .header {
-	height: 5.3125rem;
 	background-color: $color-watercourse;
 
 	&__body {
 		@include flex-between-center;
 
+		position: relative;
 		width: 100%;
-		height: 100%;
+		height: 5.3125rem;
 	}
 
 	&__logo {
-		width: 7.5rem;
-		height: 2.6875rem;
+		width: 5rem;
+		height: 3.9375rem;
 
 		img {
-			width: 7.5rem;
-			height: 2.6875rem;
+			width: 5rem;
+			height: 3.9375rem;
 		}
 	}
 
@@ -26,18 +26,6 @@
 		svg {
 			width: 1.5rem;
 			height: 1.5rem;
-		}
-	}
-
-	@media screen and (min-width: 1200px) {
-		&__logo {
-			width: 10rem;
-			height: 3.625rem;
-
-			img {
-				width: 10rem;
-				height: 3.625rem;
-			}
 		}
 	}
 }

@@ -1,48 +1,40 @@
-export let select = function () {
-    let selectHeader = document.querySelectorAll('.select__header');
-    let selectItem = document.querySelectorAll('.select__item'); // Исправлено здесь
+export const select = function () {
+    const selectElements = document.querySelectorAll('.select');
 
-    selectHeader.forEach(item => {
-        item.addEventListener('click', selectToggle);
-    });
+    selectElements.forEach(select => {
+        const selectHeader = select.querySelector('.select__header');
+        const selectBody = select.querySelector('.select__body');
+        const selectItems = select.querySelectorAll('.select__item');
+        const selectCurrent = select.querySelector('.select__current');
 
-    selectItem.forEach(item => {
-        item.addEventListener('click', selectChoose);
-    });
-
-    function selectToggle() {
-        let parent = this.parentElement;
-
-        // Проверяем, открыт ли уже селект
-        if (parent.classList.contains('is-active')) {
-            // Если открыт, закрываем его
-            parent.classList.remove('is-active');
-        } else {
-            // Закрываем все селекты перед открытием нового
-            closeAllSelects();
-            // Открываем текущий селект
-            parent.classList.add('is-active');
+        if (!selectHeader || !selectBody || !selectItems || !selectCurrent) {
+            console.error('❌ Ошибка в разметке. Проверь HTML.');
+            return;
         }
-    }
 
-    function selectChoose() {
-        let text = this.innerText,
-            select = this.closest('.select'),
-            currentText = select.querySelector('.select__current');
-        currentText.innerText = text;
-        select.classList.remove('is-active'); // Закрываем селект после выбора
-    }
+        // Открытие/Закрытие списка при клике на select__header
+        selectHeader.addEventListener('click', (e) => {
+            e.stopPropagation(); // Останавливаем всплытие
+            closeAllSelects(); // Закрываем все другие селекты
+            select.querySelector('.select__wrapper').classList.toggle('is-active'); // Открываем/закрываем текущий
+        });
 
-    // Закрытие селекта при клике вне его области
-    document.addEventListener('click', function (e) {
-        if (!e.target.closest('.select')) {
-            closeAllSelects();
-        }
+        // Обработчик клика на элемент списка
+        selectItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation(); // Останавливаем всплытие
+                selectCurrent.innerText = item.innerText; // Заменяем текст в select__current
+                select.querySelector('.select__wrapper').classList.remove('is-active'); // Закрываем список
+            });
+        });
     });
 
-    // Функция закрытия всех селектов
+    // Закрытие всех селектов при клике вне их области
+    document.addEventListener('click', closeAllSelects);
+
+    // Функция для закрытия всех селектов
     function closeAllSelects() {
-        document.querySelectorAll('.select').forEach(select => {
+        document.querySelectorAll('.select__wrapper').forEach(select => {
             select.classList.remove('is-active');
         });
     }

@@ -1,7 +1,7 @@
 .filter-element {
 	overflow: hidden;
 	padding: 1.25rem 0;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid $color-quartz;
 
 	&__header {
 		cursor: pointer;
@@ -19,7 +19,7 @@
 	&__arrow {
 		width: .75rem;
 		height: .75rem;
-		stroke: $color-black-magic;
+		stroke: $color-silver;
 	}
 
 	&__selected {
@@ -51,6 +51,11 @@
 		margin-right: 10px;
 		width: 1.5rem;
 		height: 1.5rem;
-		border: 1px solid;
+		border: 1px solid $color-watercourse;
+		cursor: pointer;
+	}
+
+	&__content ul li input:checked {
+		background-color: $color-quartz;
 	}
 }

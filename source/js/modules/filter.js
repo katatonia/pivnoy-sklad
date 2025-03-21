@@ -1,31 +1,26 @@
 export const filter = () => {
-    const filterButton = document.querySelector(".filter-nav__button");
+    const filterButton = document.querySelector(".filter-nav__filter-button");
     const filterList = document.querySelector(".filter");
     const filterClose = document.querySelector(".filter__close");
-	const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".catalog__overlay");
 
-    if (filterButton && filterList) {
-        filterButton.addEventListener("click", () => {
-            filterList.classList.toggle("filter_is-active");
-			overlay.classList.add("open");
-        });
-    }
+    const toggleFilter = (state) => {
+        if (filterList && overlay) {
+            filterList.classList.toggle("filter_is-active", state);
+            overlay.classList.toggle("open", state);
+        }
+    };
 
-    if (filterClose && filterList) {
-        filterClose.addEventListener("click", () => {
-            filterList.classList.remove("filter_is-active");
-			overlay.classList.remove("open");
-        });
-    }
+    filterButton?.addEventListener("click", () => toggleFilter(true));
+    filterClose?.addEventListener("click", () => toggleFilter(false));
+    overlay?.addEventListener("click", () => toggleFilter(false));
 
     document.querySelectorAll(".filter-element__header").forEach(header => {
         header.addEventListener("click", () => {
-            document.querySelectorAll(".filter-element__content").forEach(content => {
-                if (content !== header.nextElementSibling) {
-                    content.style.display = "none";
-                }
-            });
             const content = header.nextElementSibling;
+            document.querySelectorAll(".filter-element__content").forEach(el => {
+                if (el !== content) el.style.display = "none";
+            });
             content.style.display = content.style.display === "block" ? "none" : "block";
         });
     });
@@ -45,8 +40,8 @@ export const filter = () => {
     document.querySelectorAll(".filter-element__content ul li input").forEach(checkbox => {
         checkbox.addEventListener("change", () => {
             const filterContent = checkbox.closest(".filter-element__content");
-            const filterHeader = filterContent ? filterContent.previousElementSibling : null;
-            const selectedText = filterHeader ? filterHeader.querySelector(".filter-element__selected") : null;
+            const filterHeader = filterContent?.previousElementSibling;
+            const selectedText = filterHeader?.querySelector(".filter-element__selected");
 
             if (selectedText) {
                 const selectedItems = Array.from(filterContent.querySelectorAll("input:checked"))

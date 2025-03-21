@@ -11,7 +11,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   font-family: "Geometria", sans-serif;
@@ -21,6 +21,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /* Remove default margins */
@@ -43,6 +44,7 @@ body {
   height: 100%;
   background-color: #FFFFFF;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /* Set shorter line heights for headings and interactive elements */

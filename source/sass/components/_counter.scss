@@ -5,7 +5,7 @@
 	margin: .5rem 0;
 
 	&__result {
-		font-size: 1.5rem;
+		font-size: 1.125rem;
 	}
 
 	&__body {
@@ -14,7 +14,7 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
 		width: 7.5rem;
-		border: 1.5px solid $color-cinnabar;
+		border: 1px solid $color-cinnabar;
 	}
 
 	&__number {

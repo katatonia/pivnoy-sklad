@@ -5,6 +5,8 @@
 	height: 5.3125rem;
 
 	&__item {
+		font-weight: 500;
+
 		&_hamburger {
 			display: block;
 		}
@@ -19,6 +21,7 @@
 		display: block;
 		width: 1.5rem;
 		height: 1.5rem;
+		cursor: pointer;
 
 		&_title {
 			display: none;
@@ -87,15 +90,17 @@
 			align-items: center;
 			color: $color-default-white;
 			transition: 0.3s;
-
-			&:hover {
-				opacity: .8;
-			}
 		}
 
 		&__login-btn {
 			display: block;
 			width: 18.75rem;
+			background-color: $color-cinnabar;
+			font-weight: 500;
+
+			a {
+				color: $color-default-white;
+			}
 		}
 
 		&__login-link {

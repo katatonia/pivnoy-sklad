@@ -9,15 +9,6 @@
 		position: relative;
 	}
 
-	&__title {
-		font: {
-			size: 2rem;
-			weight: 800;
-		}
-
-		margin-bottom: 1.5rem;
-	}
-
 	&__orders {
 		display: flex;
 		row-gap: 1rem;
@@ -37,18 +28,10 @@
 		&__header {
 			gap: 1.5rem;
 		}
-
-		&__title {
-			margin-bottom: 0;
-		}
 	}
 
 	@media screen and (min-width: $vp-768) {
 		padding: 6.25rem 0;
-
-		&__title {
-			font-size: 3.062rem;
-		}
 
 		&__list {
 			grid-template-columns: repeat(3, minmax(180px, 1fr));
@@ -63,10 +46,6 @@
 
 	@media screen and (min-width: $vp-1200) {
 		padding: 7.5rem 0;
-
-		&__title {
-			font-size: 3.812rem;
-		}
 	}
 
 	@media screen and (min-width: 1380px) {

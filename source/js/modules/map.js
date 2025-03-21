@@ -6,7 +6,7 @@ export const createMap = () => {
 
     const pinTemplate = `
         <div class="map__pin" style="width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;">
-            <img src="icons/logo_no_text.svg" width="45" height="45" aria-hidden="true">
+            <img src="icons/logo_base.svg" width="45" height="45" aria-hidden="true">
             </img>
         </div>
     `;

@@ -2,11 +2,11 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 80%;
+	width: 90%;
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: $color-mint-cream;
+	background-color: $color-default-white;
 	padding: 2.5rem .625rem;
 	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
 	transform: translateX(100%);
@@ -26,18 +26,22 @@
 		position: absolute;
 		top: 1.25rem;
 		left: .625rem;
-		stroke: $color-black-magic;
+		stroke: $color-silver;
 		cursor: pointer;
-	}
-
-	&__apply {
-		margin: 0 auto;
 	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
 		margin: 2.5rem 0 3.5rem;
-		border-top: 1px solid;
+		border-top: 1px solid $color-quartz;
+	}
+
+	@media screen and (min-width: $vp-768) {
+		width: 50%;
+	}
+
+	@media screen and (min-width: $vp-1200) {
+		width: 40%;
 	}
 }
