@@ -64,6 +64,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-weight: 500;
 	}
 
 	&__link {
@@ -72,6 +73,7 @@
 		align-items: center;
 		gap: .5rem;
 		text-transform: lowercase;
+		font-weight: 500;
 
 		svg {
 			stroke: $color-default-white;
@@ -79,20 +81,6 @@
 	}
 
 	@media screen and (min-width: $vp-576) {
-		border-top: 1px solid $color-default-white;
-
-		&__intro {
-			transform: none;
-			background-color: $color-watercourse;
-			top: 0;
-			height: 100%;
-			width: 50%;
-		}
-
-		&__overlay {
-			background-color: transparent;
-		}
-
 		&__title {
 			font-size: 2.875rem;
 		}
@@ -101,6 +89,5 @@
 			font-size: 1.125rem;
 			max-width: 31.25rem;
 		}
-
 	}
 }

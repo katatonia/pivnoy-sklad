@@ -3,7 +3,7 @@
 
 	&__title {
 		margin-bottom: 1.5rem;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	&__arrow {
@@ -33,7 +33,7 @@
 	}
 
 	&__subtitle {
-		font-weight: 500;
+		font-weight: 600;
 		margin-bottom: .5rem;
 
 		&_new,
@@ -73,13 +73,8 @@
 			}
 		}
 
-		&__subtitle {
-			font-weight: 500;
-		}
-
 		&__link {
 			display: block;
-			font-weight: 500;
 			cursor: pointer;
 		}
 	}
