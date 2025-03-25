@@ -1,7 +1,7 @@
 .project {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
-	max-width: 23.125rem;
+	// max-width: 23.125rem;
 	transition: .3s;
 
 	&:nth-child(2) {

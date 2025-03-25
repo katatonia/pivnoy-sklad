@@ -27,13 +27,9 @@
 		margin-bottom: 5rem;
 
 		&__title {
-			font: {
-				size: 3.812rem;
-				weight: 800;
+			img {
+				width: 15.625rem;
 			}
-
-			text-transform: uppercase;
-			color: $color-default-white;
 		}
 	}
 
@@ -77,8 +73,12 @@
 		padding: 3.75rem 0;
 
 		.col-1 {
+			gap: 2rem;
+
 			&__title {
-				font-size: 5rem;
+				img {
+					width: 17.5rem;
+				}
 			}
 		}
 	}
@@ -99,7 +99,13 @@
 
 		.col-1 {
 			margin-bottom: 0;
-			gap: 1.5rem;
+			gap: 3rem;
+
+			&__title {
+				img {
+					width: 20rem
+				}
+			}
 		}
 	}
 }

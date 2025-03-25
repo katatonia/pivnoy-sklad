@@ -2,15 +2,6 @@
 	padding: 5rem 0;
 	background-color: $color-my-sin-rgba;
 
-	&__body {
-		max-width: max-content;
-	}
-
-	&__list {
-		gap: 1.875rem;
-	}
-
-
 	&__title {
 		svg {
 			width: 1rem;
@@ -27,6 +18,7 @@
 		overflow-y: hidden;
 		scroll-behavior: smooth;
 		scrollbar-width: none;
+		gap: 1.875rem;
 	}
 
 	@media screen and (min-width: $vp-768) {

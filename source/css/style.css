@@ -306,6 +306,7 @@ button {
   color: #FFFFFF;
   padding: 0.625rem;
   background-color: #F04E23;
+  font-weight: 500;
 }
 .button a {
   color: #F04E23;
@@ -395,6 +396,7 @@ button {
 }
 .card__name {
   font-size: 1.125rem;
+  font-weight: 500;
 }
 .card__style {
   font-size: 0.75rem;
@@ -411,6 +413,7 @@ button {
   text-transform: lowercase;
   cursor: pointer;
   color: inherit;
+  margin-bottom: 0.625rem;
 }
 .card__link svg {
   stroke: #2D2B28;
@@ -656,6 +659,7 @@ button {
   font-weight: normal;
   margin: 0.5rem 0;
   font-size: 14px;
+  cursor: pointer;
 }
 .filter-element__content {
   display: none;
@@ -676,7 +680,7 @@ button {
   margin-right: 10px;
   width: 1.5rem;
   height: 1.5rem;
-  border: 1px solid #025944;
+  border: 1px solid #C0C0C0;
   cursor: pointer;
 }
 .filter-element__content ul li input:checked {
@@ -735,8 +739,8 @@ button {
 
 .sticky-cart {
   position: fixed;
-  right: 2.5rem;
-  bottom: 2.5rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
   z-index: 500;
   background-color: #F04E23;
   padding: 0.5rem;
@@ -754,6 +758,14 @@ button {
   width: 1.5rem;
   height: 1.5rem;
   stroke: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .sticky-cart {
+    width: 3.125rem;
+    height: 3.125rem;
+    right: 2.5rem;
+    bottom: 2.5rem;
+  }
 }
 
 /* GENERAL BLOCKS */
@@ -1116,11 +1128,8 @@ button {
   max-width: 340px;
   margin-bottom: 5rem;
 }
-.footer .col-1__title {
-  font-size: 3.812rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #FFFFFF;
+.footer .col-1__title img {
+  width: 15.625rem;
 }
 .footer .col-3 {
   margin-top: 2rem;
@@ -1153,8 +1162,11 @@ button {
   .footer {
     padding: 3.75rem 0;
   }
-  .footer .col-1__title {
-    font-size: 5rem;
+  .footer .col-1 {
+    gap: 2rem;
+  }
+  .footer .col-1__title img {
+    width: 17.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1172,7 +1184,10 @@ button {
   }
   .footer .col-1 {
     margin-bottom: 0;
-    gap: 1.5rem;
+    gap: 3rem;
+  }
+  .footer .col-1__title img {
+    width: 20rem;
   }
 }
 
@@ -1238,6 +1253,7 @@ button {
 .menu__subtitle {
   font-weight: 600;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 .menu__subtitle_new, .menu__subtitle_leaders {
   margin-bottom: 0;
@@ -1299,6 +1315,14 @@ button {
   gap: 2rem;
 }
 
+.address {
+  color: #FFFFFF;
+}
+.address__title {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 /* INDEX */
 .headling {
   position: relative;
@@ -1318,7 +1342,7 @@ button {
 }
 .headling__image {
   width: 100%;
-  height: 50rem;
+  height: 90vh;
 }
 .headling__image img {
   width: 100%;
@@ -1559,12 +1583,6 @@ button {
   padding: 5rem 0;
   background-color: rgba(247, 150, 102, 0.05);
 }
-.projects__body {
-  max-width: max-content;
-}
-.projects__list {
-  gap: 1.875rem;
-}
 .projects__title svg {
   width: 1rem;
   height: 1rem;
@@ -1578,6 +1596,7 @@ button {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  gap: 1.875rem;
 }
 @media screen and (min-width: 768px) {
   .projects {
@@ -1598,7 +1617,6 @@ button {
 .project {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  max-width: 23.125rem;
   transition: 0.3s;
 }
 .project:nth-child(2) {
@@ -2072,6 +2090,7 @@ button {
 }
 .cart-item__name {
   margin-bottom: 0.75rem;
+  font-weight: 500;
 }
 .cart-item__body {
   display: grid;

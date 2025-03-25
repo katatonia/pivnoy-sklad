@@ -31,7 +31,10 @@
     }
 
     &__name {
-        font-size: 1.125rem;
+        font: {
+			size: 1.125rem;
+			weight: 500;
+		}
     }
 
     &__style {
@@ -51,6 +54,7 @@
         text-transform: lowercase;
         cursor: pointer;
         color: inherit;
+		margin-bottom: .625rem;
 
         svg {
             stroke: $color-black-magic;
