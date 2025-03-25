@@ -1293,7 +1293,7 @@ button {
 }
 .contacts__title {
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .contacts__list {
   display: flex;
@@ -1306,7 +1306,7 @@ button {
 }
 .schedule__title {
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .connection {
@@ -1320,7 +1320,7 @@ button {
 }
 .address__title {
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* INDEX */
