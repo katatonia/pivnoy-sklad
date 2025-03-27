@@ -3,6 +3,7 @@ export const filter = () => {
     const filterList = document.querySelector(".filter");
     const filterClose = document.querySelector(".filter__close");
     const overlay = document.querySelector(".catalog__overlay");
+    const selectedFiltersContainer = document.querySelector(".catalog__selected-filters");
 
     const toggleFilter = (state) => {
         if (filterList && overlay) {
@@ -42,11 +43,46 @@ export const filter = () => {
             const filterContent = checkbox.closest(".filter-element__content");
             const filterHeader = filterContent?.previousElementSibling;
             const selectedText = filterHeader?.querySelector(".filter-element__selected");
+            const labelText = checkbox.parentElement.textContent.trim();
 
             if (selectedText) {
                 const selectedItems = Array.from(filterContent.querySelectorAll("input:checked"))
                     .map(el => el.parentElement.textContent.trim());
                 selectedText.textContent = selectedItems.length > 0 ? selectedItems.join(", ") : "Выберите вариант";
+            }
+
+            if (checkbox.checked) {
+                const filterItem = document.createElement("li");
+                filterItem.classList.add("catalog__selected-filters-item");
+                filterItem.innerHTML = `${labelText}
+                    <svg width="24" height="24">
+                        <use xlink:href="icons/sprite.svg#cancel"></use>
+                    </svg>`;
+
+                filterItem.dataset.filterName = labelText;
+                selectedFiltersContainer.appendChild(filterItem);
+
+                const cancelBtn = filterItem.querySelector("svg");
+                cancelBtn.addEventListener("click", () => {
+                    const correspondingItem = Array.from(document.querySelectorAll(".filter-element__content ul li"))
+                        .find(li => li.textContent.trim() === labelText);
+
+                    if (correspondingItem) {
+                        const correspondingCheckbox = correspondingItem.querySelector("input");
+                        if (correspondingCheckbox && correspondingCheckbox.checked) {
+                            correspondingCheckbox.checked = false;
+                            correspondingCheckbox.dispatchEvent(new Event("change"));
+                        }
+                    }
+
+                    filterItem.remove();
+                });
+
+            } else {
+                const existingItem = selectedFiltersContainer.querySelector(`[data-filter-name="${labelText}"]`);
+                if (existingItem) {
+                    existingItem.remove();
+                }
             }
         });
     });

@@ -52,11 +52,11 @@
 		margin-right: 10px;
 		width: 1.5rem;
 		height: 1.5rem;
-		border: 1px solid $color-silver;
+		border: 1px solid $color-watercourse;
 		cursor: pointer;
 	}
 
 	&__content ul li input:checked {
-		background-color: $color-quartz;
+		background-color: $color-watercourse;
 	}
 }

@@ -9,6 +9,36 @@
 		position: relative;
 	}
 
+	&__title {
+		margin-bottom: 0;
+	}
+
+	&__selected-filters {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+		padding: .5rem 0;
+		min-height: 2.9375rem;
+	}
+
+	&__selected-filters-item {
+		padding: .3125rem;
+		background-color: $color-cinnabar;
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		color: $color-default-white;
+		font-size: .875rem;
+
+		svg {
+			cursor: pointer;
+			stroke: $color-default-white;
+			width: .75rem;
+			height: .75rem;
+		}
+	}
+
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10.9375rem, 1fr));
@@ -44,10 +74,6 @@
 		&__list {
 			column-gap: .625rem;
 			row-gap: 1.5rem;
-		}
-
-		&__header {
-			gap: 1.5rem;
 		}
 	}
 

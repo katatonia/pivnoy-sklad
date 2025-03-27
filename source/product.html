@@ -140,7 +140,15 @@
 				<div class="container">
 					<div class="product__body">
 						<div class="product__block-1">
-							<img class="product__photo" src="images/product.jpg" width="400" height="400" alt="">
+							<div class="product__img-wrapper">
+								<a class="product__button" href="catalog.html">
+									<svg class="product__arrow" width="24" height="24">
+										<use xlink:href="icons/sprite.svg#arrow"></use>
+									</svg>
+									В каталог
+								</a>
+								<img class="product__photo" src="images/product.jpg" width="400" height="400" alt="">
+							</div>
 							<div class="product__card">
 								<div class="product__header">
 									<div class="product__title">
@@ -155,7 +163,7 @@
 											<svg class="counter__minus" width="24" height="24">
 												<use xlink:href="icons/sprite.svg#minus"></use>
 											</svg>
-											<span class="counter__number">1</span>
+											<input class="counter__number"></input>
 											<svg class="counter__plus" width="24" height="24">
 												<use xlink:href="icons/sprite.svg#plus"></use>
 											</svg>
@@ -164,6 +172,7 @@
 									</div>
 									<div class="product__buttons">
 										<button class="card__button button">Добавить в корзину</button>
+										<img src="images/qr-product.png" width="40" height="40" alt="QR код">
 										<button class="favorite">
 											<svg class="favorite__icon" width="24" height="24">
 												<use xlink:href="icons/sprite.svg#favorite"></use>
@@ -345,7 +354,7 @@
 									<svg class="counter__minus" width="24" height="24">
 										<use xlink:href="icons/sprite.svg#minus"></use>
 									</svg>
-									<span class="counter__number">1</span>
+									<input class="counter__number"></input>
 									<svg class="counter__plus" width="24" height="24">
 										<use xlink:href="icons/sprite.svg#plus"></use>
 									</svg>
@@ -380,6 +389,16 @@
 			<span class="cart-modal__text cart-modal__text_add" data-message="added">Товар добавлен в корзину!</span>
 			<span class="cart-modal__text cart-modal__text_delete" data-message="deleted">Товар удалён из
 				корзины!</span>
+		</div>
+	</div>
+
+	<!-- Модальное окно -->
+	<div class="balance-modal" id="balanceModal">
+		<div class="balance-modal__body">
+			<svg class="balance-modal__close" width="24" height="24">
+				<use xlink:href="icons/sprite.svg#cancel"></use>
+			</svg>
+			<span class="balance-modal__text balance-modal__text" data-message="balance">Товар закончился!</span>
 		</div>
 	</div>
 

@@ -12,8 +12,9 @@
 
 	&__more {
 		text-transform: lowercase;
-		text-decoration: underline;
-		font-size: 14px;
+		font-size: 0.875rem;
+		padding-bottom: 1px;
+		border-bottom: 1px solid $color-black-magic;
 	}
 
 	&__arrow {
